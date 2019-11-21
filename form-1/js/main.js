@@ -8,7 +8,7 @@ for (let i = 0; i < forms.length; i++) {
 let rules = {
 
 
-    required: function (el) {
+    required: function (el) {  
         if (el.value != '') {
             return true;
         } else {
