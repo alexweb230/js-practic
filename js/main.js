@@ -115,7 +115,50 @@ const pers2 = {
 
 const result = bind(pers, logRepson);
 
-result(['test', '00000']);
+result([['test', '00000', 'ffffff'], ['fffffff', "dfffff"]]);
+
+
+//====================================
+//async
+
+
+console.log('start');
+console.log('start-2');
+
+setTimeout(()=>{
+    console.log('timeout');
+}, 2000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
