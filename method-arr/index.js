@@ -24,3 +24,14 @@ const people = [
 //     console.log(person);
 //     console.log('forEach')
 // })
+
+
+const peapleSecond = people.map(person => {
+
+    return person.name
+
+    // return 'hello'
+});
+
+console.log(peapleSecond);
+
