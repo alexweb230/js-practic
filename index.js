@@ -1,4 +1,5 @@
-window.onload = () => {}
+window.onload = () => {
+}
 
 class FormBuilder {
     constructor(options) {
@@ -11,10 +12,11 @@ class FormBuilder {
     }
 
 
+    validator() {
 
-    validator(){
+        const inputs = this.formParent.elements
 
-        return console.log(this.formParent);
+        console.log(inputs);
 
 
     }
