@@ -2,9 +2,9 @@ const people = [
     {name: "alex", age: 25, job: 'front'},
     {name: "alex-1", age: 24, job: 'front-1'},
     {name: "alex-2", age: 26, job: 'front-2'},
-    {name: "alex-3", age: 27, job: 'front-3'},
-    {name: "alex-4", age: 27, job: 'front-4'},
-    {name: "alex-5", age: 29, job: 'front-5'},
+    {name: "alex-3", age: 13, job: 'front-3'},
+    {name: "alex-4", age: 7, job: 'front-4'},
+    {name: "alex-5", age: 12, job: 'front-5'},
 ]
 
 // for (let i = 0; i < people.length; i++) {
@@ -26,12 +26,53 @@ const people = [
 // })
 
 
-const peapleSecond = people.map(person => {
+// const peapleSecond = people.map(person => {
+//
+//     return person.age
+//
+//
+// });
 
-    return person.name
+// console.log(peapleSecond);
+//
+// const aduts = [];
+// for(let i = 0; i < people.length; i++){
+//    if(people[i].age >= 18){
+//        aduts.push(people[i]);
+//    }
+// }
+//
 
-    // return 'hello'
-});
 
-console.log(peapleSecond);
+
+
+
+// const aduts = people.filter(per => per.age >= 18);
+//
+// console.log(aduts);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
