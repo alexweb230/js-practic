@@ -1,10 +1,5 @@
-window.onload = () => {
+window.onload = () => {}
 
-
-
-
-
-}
 class FormBuilder {
     constructor(options) {
         this.formId = options.formId
@@ -15,15 +10,20 @@ class FormBuilder {
         return document.getElementById(this.formId);
     }
 
+
+
     validator(){
-        return console.log(this.formParent)
+
+        return console.log(this.formParent);
+
+
     }
 
 }
 
 
 const form = new FormBuilder({
-    formId: 'form',
-    formParent: 'form'
+    formId: 'form'
 });
 
+form.validator();

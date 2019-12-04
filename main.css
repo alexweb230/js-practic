@@ -1,49 +1,50 @@
-:root{
+:root {
     box-sizing: border-box;
 }
 
 *,
 *:before,
-*:after{
+*:after {
     box-sizing: inherit;
 }
 
-
-body{
+body {
     margin: 0;
     font-size: 1.2em;
 }
 
-
-body * + *{
+body * + * {
     margin-top: 1em;
 }
-small{
+
+small {
     color: red;
 }
 
-button{
+button {
     background-color: transparent;
     border: 0;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
 /*form*/
 
-.form{
+.form {
     max-width: 400px;
     margin: 100px auto 0;
 }
 
-.form input{
+.form input {
     width: 100%;
     height: 30px;
+    padding-left: 10px;
 }
-.form button{
-   padding: .3em 1em;
+
+.form button {
+    padding: .3em 1em;
     background-color: coral;
     color: white;
     border-radius: 3px;
