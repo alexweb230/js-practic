@@ -14,11 +14,13 @@ class FormBuilder {
 
     validator() {
 
-        const inputs = this.formParent.elements
+        const inputs = this.formParent.elements;
 
-        console.log(inputs);
-
-
+        for (let inp of inputs) {
+            if (inp.tagName !== 'BUTTON' && inp.value === '') {
+                console.log(inp)
+            }
+        }
     }
 
 }
@@ -29,3 +31,5 @@ const form = new FormBuilder({
 });
 
 form.validator();
+
+
