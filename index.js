@@ -32,10 +32,19 @@ class FormBuilder {
 
 const form = new FormBuilder({
     formId: 'form',
-    patern: 'reg'
+    patern: '//'
 });
 
 form.validator();
 
 
+// .  любой одиночный символ
 
+// []  диапазан,  любой из них
+
+//  $  конец строки
+
+//  ^   начало строки
+
+
+// \ екранирование
