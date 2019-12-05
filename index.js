@@ -12,17 +12,24 @@ class FormBuilder {
         return document.getElementById(this.formId);
     }
     get regcheck(){
-        return console.log(this.patern);
+        // return console.log(this.patern);
+        return true
     }
 
+    showError(){
+        const inputs = this.formParent.elements;
+
+        console.log(inputs);
+    }
 
     validator() {
 
         const inputs = this.formParent.elements;
 
         for (let inp of inputs) {
-            if (inp.tagName !== 'BUTTON' && inp.value === '') {
-                console.log(inp)
+            if (inp.tagName !== 'BUTTON' && inp.value === '' && this.regcheck) {
+                console.log(inp);
+                this.showError();
             }
         }
     }
