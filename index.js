@@ -21,7 +21,9 @@ class FormBuilder {
         let error = document.createElement('small');
         error.className = "error"
         error.innerHTML = "заполните поля"
-        return console.log(error)
+         element.after(error);
+
+
 
 
     }
