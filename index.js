@@ -11,15 +11,17 @@ class FormBuilder {
     get formParent() {
         return document.getElementById(this.formId);
     }
-    get regcheck(){
+
+    get regcheck() {
         // return console.log(this.patern);
         return true
     }
 
-    showError(element){
-
-
-     return element.nextElementSibling.innerHTML = 'rrrrrrrrr';
+    showError(element) {
+        let error = document.createElement('small');
+        error.className = "error"
+        error.innerHTML = "заполните поля"
+        return console.log(error)
 
 
     }
