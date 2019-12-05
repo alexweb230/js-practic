@@ -16,12 +16,11 @@ class FormBuilder {
         return true
     }
 
-    showError(){
-        const inputs = this.formParent.elements;
+    showError(element){
 
-        console.log(inputs.nextElementSibling === )
-        for (let inp of inputs){
-        }
+
+     return element.nextElementSibling.innerHTML = 'rrrrrrrrr';
+
 
     }
 
@@ -31,8 +30,7 @@ class FormBuilder {
 
         for (let inp of inputs) {
             if (inp.tagName !== 'BUTTON' && inp.value === '' && this.regcheck) {
-                console.log(inp);
-                this.showError();
+                this.showError(inp);
             }
         }
     }
