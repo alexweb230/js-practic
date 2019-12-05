@@ -19,7 +19,10 @@ class FormBuilder {
     showError(){
         const inputs = this.formParent.elements;
 
-        console.log(inputs);
+        console.log(inputs.nextElementSibling === )
+        for (let inp of inputs){
+        }
+
     }
 
     validator() {
