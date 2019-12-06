@@ -19,27 +19,53 @@ class FormBuilder {
 
     showError(element) {
         let error = document.createElement('small');
-        error.className = "error"
-        error.innerHTML = "заполните поля"
-         element.after(error);
+        error.className = "error";
+        error.innerHTML = "заполните поля";
+        if(!element.nextElementSibling){
+            element.after(error);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        // let sibling = element.nextElementSibling;
+        //
+        // console.log(error.length)
 
 
 
 
     }
 
-    validator() {
+    validator(e) {
 
         const inputs = this.formParent.elements;
 
         for (let inp of inputs) {
             if (inp.tagName !== 'BUTTON' && inp.value === '' && this.regcheck) {
                 this.showError(inp);
+                e.preventDefault()
             }
         }
     }
 
+    submit() {
+        this.formParent.addEventListener('submit', (e) => {
+            this.validator(e);
+        })
+    }
+
 }
+
+
 
 
 const form = new FormBuilder({
@@ -47,9 +73,7 @@ const form = new FormBuilder({
     patern: '//'
 });
 
-form.validator();
-
-
+form.submit();
 // .  любой одиночный символ
 
 // []  диапазан,  любой из них
@@ -58,5 +82,23 @@ form.validator();
 
 //  ^   начало строки
 
-
 // \ екранирование
+
+// [^sw]  исключает в наборе буквы  s  и  w
+
+// \d  любая единичная цифра
+
+
+// \d\d\d   или  [0-9][0-9][0-9]  3 любых  цифр
+
+// \D    все что угодно кроме цифр
+
+
+
+
+
+
+
+
+
+
