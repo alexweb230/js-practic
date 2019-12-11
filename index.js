@@ -25,7 +25,11 @@ class FormBuilder {
             element.after(error);
         }
     }
-
+    hideEror(element){
+        if (element.nextElementSibling && element.nextElementSibling.tagName === 'SMALL') {
+             console.log('test');
+        }
+    }
     validator(e) {
 
         const inputs = this.formParent.elements;
@@ -39,8 +43,6 @@ class FormBuilder {
     }
 
     init() {
-
-
         this.formParent.addEventListener('submit', (e) => {
             this.validator(e);
         });
@@ -52,8 +54,8 @@ class FormBuilder {
                 if(e.keyCode === 8 && inp.value === ''){
                     this.showError(inp);
                 }
-                else{
-                   console.log('test-3')
+                else {
+                    this.hideEror(inp)
                 }
             });
         }
