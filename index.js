@@ -21,28 +21,9 @@ class FormBuilder {
         let error = document.createElement('small');
         error.className = "error";
         error.innerHTML = "заполните поля";
-        if(!element.nextElementSibling){
+        if (!element.nextElementSibling) {
             element.after(error);
         }
-
-
-
-
-
-
-
-
-
-
-
-
-        // let sibling = element.nextElementSibling;
-        //
-        // console.log(error.length)
-
-
-
-
     }
 
     validator(e) {
@@ -57,15 +38,29 @@ class FormBuilder {
         }
     }
 
-    submit() {
+    init() {
+
+
         this.formParent.addEventListener('submit', (e) => {
             this.validator(e);
-        })
+        });
+
+        const inputs = this.formParent.elements;
+
+        for(let inp of inputs){
+            inp.addEventListener('keyup', (e)=>{
+                if(e.keyCode === 8 && inp.value === ''){
+                    this.showError(inp);
+                }
+                else{
+                   console.log('test-3')
+                }
+            });
+        }
+
     }
 
 }
-
-
 
 
 const form = new FormBuilder({
@@ -73,7 +68,7 @@ const form = new FormBuilder({
     patern: '//'
 });
 
-form.submit();
+form.init();
 // .  любой одиночный символ
 
 // []  диапазан,  любой из них
