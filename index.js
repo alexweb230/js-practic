@@ -12,6 +12,10 @@ class FormBuilder {
         return document.getElementById(this.formId);
     }
 
+    get inputs() {
+        return this.formParent.elements;
+    }
+
     get regcheck() {
         // return console.log(this.patern);
         return true
@@ -25,33 +29,31 @@ class FormBuilder {
             element.after(error);
         }
     }
-    hideEror(element){
+
+    hideEror(element) {
         if (element.nextElementSibling && element.nextElementSibling.tagName === 'SMALL') {
-             console.log('test');
-        }
-    }
-    validator(e) {
-
-        const inputs = this.formParent.elements;
-
-        for (let inp of inputs) {
-            if (inp.tagName !== 'BUTTON' && inp.value === '' && this.regcheck) {
-                this.showError(inp);
-                e.preventDefault()
-            }
+            console.log('test');
+            element.nextElementSibling.remove();
         }
     }
 
-    init() {
+
+    formSubmit(){
         this.formParent.addEventListener('submit', (e) => {
-            this.validator(e);
+            for (let inp of this.inputs) {
+                if (inp.tagName !== 'BUTTON' && inp.value === '' && this.regcheck) {
+                    this.showError(inp);
+                    e.preventDefault()
+                }
+            }
         });
 
-        const inputs = this.formParent.elements;
+    }
 
-        for(let inp of inputs){
-            inp.addEventListener('keyup', (e)=>{
-                if(e.keyCode === 8 && inp.value === ''){
+    keyPress(){
+        for (let inp of this.inputs) {
+            inp.addEventListener('keyup', (e) => {
+                if (e.keyCode === 8 && inp.value === '') {
                     this.showError(inp);
                 }
                 else {
@@ -59,7 +61,11 @@ class FormBuilder {
                 }
             });
         }
+    }
 
+    init() {
+        this.formSubmit();
+        this.keyPress();
     }
 
 }
