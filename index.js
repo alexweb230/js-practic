@@ -57,9 +57,10 @@ class FormBuilder {
 
 
             // document.querySelector('.btn-submit').setAttribute('disabled', true);
-            // document.querySelector('.btn-submit').removeAttribute('disabled');
+
 
             inp.addEventListener('keyup', (e) => {
+                document.querySelector('.btn-submit').removeAttribute('disabled');
                 if (e.keyCode === 8 && inp.value === '') {
                     this.showError(inp);
                 }
