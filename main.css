@@ -53,7 +53,9 @@ button {
 
 
 
-
+.form button:disabled{
+    opacity: .4;
+}
 
 
 

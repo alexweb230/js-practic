@@ -16,6 +16,8 @@ class FormBuilder {
         return this.formParent.elements;
     }
 
+
+
     get regcheck() {
         // return console.log(this.patern);
         return true
@@ -32,8 +34,8 @@ class FormBuilder {
 
     hideEror(element) {
         if (element.nextElementSibling && element.nextElementSibling.tagName === 'SMALL') {
-            console.log('test');
             element.nextElementSibling.remove();
+
         }
     }
 
@@ -52,12 +54,17 @@ class FormBuilder {
 
     keyPress(){
         for (let inp of this.inputs) {
+
+
+            // document.querySelector('.btn-submit').setAttribute('disabled', true);
+            // document.querySelector('.btn-submit').removeAttribute('disabled');
+
             inp.addEventListener('keyup', (e) => {
                 if (e.keyCode === 8 && inp.value === '') {
                     this.showError(inp);
                 }
                 else {
-                    this.hideEror(inp)
+                    this.hideEror(inp);
                 }
             });
         }
