@@ -16,6 +16,20 @@ class FormBuilder {
         return this.formParent.elements;
     }
 
+    get btnSubmit() {
+        let btn = this.formParent.children;
+        btn = Array.prototype.slice.call(btn);
+        let btn2;
+
+        btn.map(m => {
+            if(m.classList.contains('btn-submit')){
+                btn2 = m
+            }
+
+        });
+
+        return btn2;
+    }
 
 
     get regcheck() {
@@ -35,12 +49,11 @@ class FormBuilder {
     hideEror(element) {
         if (element.nextElementSibling && element.nextElementSibling.tagName === 'SMALL') {
             element.nextElementSibling.remove();
-
         }
     }
 
 
-    formSubmit(){
+    formSubmit() {
         this.formParent.addEventListener('submit', (e) => {
             for (let inp of this.inputs) {
                 if (inp.tagName !== 'BUTTON' && inp.value === '' && this.regcheck) {
@@ -52,7 +65,7 @@ class FormBuilder {
 
     }
 
-    keyPress(){
+    keyPress() {
         for (let inp of this.inputs) {
 
 
@@ -60,7 +73,7 @@ class FormBuilder {
 
 
             inp.addEventListener('keyup', (e) => {
-                document.querySelector('.btn-submit').removeAttribute('disabled');
+                this.btnSubmit.removeAttribute('disabled');
                 if (e.keyCode === 8 && inp.value === '') {
                     this.showError(inp);
                 }
