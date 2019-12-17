@@ -30,10 +30,7 @@ class FormBuilder {
     }
 
     get regcheck() {
-        // return console.log(this.patern);
-
-        return this.paternName.test(this.paternName)
-
+        return console.log( this.paternName);
     }
 
     showError(element) {
@@ -55,7 +52,7 @@ class FormBuilder {
     formSubmit() {
         this.formParent.addEventListener('submit', (e) => {
             for (let inp of this.inputs) {
-                if (inp.tagName !== 'BUTTON' && inp.value === '' && this.regcheck) {
+                if (inp.tagName !== 'BUTTON' && inp.value === '') {
                     this.showError(inp);
                     e.preventDefault()
                 }
@@ -68,6 +65,8 @@ class FormBuilder {
         for (let inp of this.inputs) {
             inp.addEventListener('keyup', (e) => {
                 this.btnSubmit.removeAttribute('disabled');
+
+
                 if (e.keyCode === 8 && inp.value === '') {
                     this.showError(inp);
                 }
