@@ -31,7 +31,9 @@ class FormBuilder {
 
     get regcheck() {
         // return console.log(this.patern);
-        return true
+
+        return this.paternName.test(this.paternName)
+
     }
 
     showError(element) {
@@ -79,6 +81,7 @@ class FormBuilder {
     init() {
         this.formSubmit();
         this.keyPress();
+        this.regcheck;
     }
 
 }
@@ -86,7 +89,7 @@ class FormBuilder {
 
 const form = new FormBuilder({
     formId: 'form',
-    patern: '//'
+    paternName: '/\D+/'
 });
 
 form.init();
@@ -134,6 +137,13 @@ form2.init();
 //квантификация
 
 // n{4} искать символ n подряд 4 раза
+// n{4, 6}  от 4  до  6 символов подряд
+
+// * от 0  и выше
+
+// + от 1 и выше
+
+// ? - нуль  или раз
 
 
 
