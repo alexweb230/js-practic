@@ -3,8 +3,8 @@ window.onload = () => {
 
 class FormBuilder {
     constructor(options) {
-        this.formId = options.formId
-        this.patern = options.patern
+        this.formId = options.formId;
+        this.paternName = options.paternName;
 
     }
 
@@ -22,15 +22,12 @@ class FormBuilder {
         let btn2;
 
         btn.map(m => {
-            if(m.classList.contains('btn-submit')){
+            if (m.classList.contains('btn-submit')) {
                 btn2 = m
             }
-
         });
-
         return btn2;
     }
-
 
     get regcheck() {
         // return console.log(this.patern);
@@ -67,11 +64,6 @@ class FormBuilder {
 
     keyPress() {
         for (let inp of this.inputs) {
-
-
-            // document.querySelector('.btn-submit').setAttribute('disabled', true);
-
-
             inp.addEventListener('keyup', (e) => {
                 this.btnSubmit.removeAttribute('disabled');
                 if (e.keyCode === 8 && inp.value === '') {
@@ -98,6 +90,15 @@ const form = new FormBuilder({
 });
 
 form.init();
+
+const form2 = new FormBuilder({
+    formId: 'form2',
+    paternName: '//'
+});
+
+form2.init();
+
+
 // .  любой одиночный символ
 
 // []  диапазан,  любой из них
