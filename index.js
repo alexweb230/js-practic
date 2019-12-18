@@ -5,7 +5,6 @@ class FormBuilder {
     constructor(options) {
         this.formId = options.formId;
         this.paternName = options.paternName;
-
     }
 
     get formParent() {
@@ -30,7 +29,7 @@ class FormBuilder {
     }
 
     get regcheck() {
-        return console.log( this.paternName);
+        return new RegExp(this.paternName);
     }
 
     showError(element) {
@@ -58,7 +57,6 @@ class FormBuilder {
                 }
             }
         });
-
     }
 
     keyPress() {
@@ -66,6 +64,9 @@ class FormBuilder {
             inp.addEventListener('keyup', (e) => {
                 this.btnSubmit.removeAttribute('disabled');
 
+                if (this.regcheck.test(inp.value)) {
+                    console.log('reg');
+                }
 
                 if (e.keyCode === 8 && inp.value === '') {
                     this.showError(inp);
@@ -88,14 +89,15 @@ class FormBuilder {
 
 const form = new FormBuilder({
     formId: 'form',
-    paternName: '/\D+/'
+    paternName: /\D/,
+
 });
 
 form.init();
 
 const form2 = new FormBuilder({
     formId: 'form2',
-    paternName: '//'
+    paternName: /\d+/
 });
 
 form2.init();
@@ -130,7 +132,6 @@ form2.init();
 //  \b - граница слова
 
 //  \B -  все кроме не границ слова
-
 
 
 //квантификация
