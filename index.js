@@ -89,7 +89,7 @@ class FormBuilder {
 
 const form = new FormBuilder({
     formId: 'form',
-    paternName: /\D/,
+    paternName: /\D+/,
 
 });
 
