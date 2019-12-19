@@ -44,16 +44,20 @@ class sliderCarusel {
     }
 
     prevSlider() {
-        --this.option.position;
-        console.log(this.option.position);
-        this.wrap.style.transform = `translateX(${this.option.position * this.option.widthSlider}%)`;
+
+        if(this.option.position > 0){
+            --this.option.position;
+            console.log(this.option.position);
+            this.wrap.style.transform = `translateX(-${this.option.position * this.option.widthSlider}%)`;
+        }
+
 
     }
 
     nextSlider() {
         ++this.option.position;
         console.log(this.option.position);
-        this.wrap.style.transform = `translateX(${this.option.position * this.option.widthSlider}%)`;
+        this.wrap.style.transform = `translateX(-${this.option.position * this.option.widthSlider}%)`;
     }
 
     controllSlider() {
