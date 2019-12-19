@@ -1,16 +1,18 @@
 'use strict';
 
 class sliderCarusel {
-    constructor({main, wrap, position = 0}) {
+    constructor({main, wrap, next, prev, position = 0, slides = 1}) {
         this.main = document.querySelector(main);
         this.wrap = document.querySelector(wrap);
         this.slides = document.querySelector(wrap).children;
-        this.position = position;
+        this.next = document.querySelector(next);
+        this.prev = document.querySelector(prev);
+        this.slidesToShow = slides;
+        this.option = {
+            position,
+            widthSlider: Math.floor(100 / this.slidesToShow)
+        }
 
-    }
-    init() {
-        this.addGloClass();
-        this.addStyle();
     }
 
     addGloClass() {
@@ -35,19 +37,53 @@ class sliderCarusel {
            }
            .glo-slider--item{
               margin: auto 0 !important;
-              flex: 0 0 25% !important;
+              flex: 0 0 ${this.option.widthSlider}% !important;
            }
         `;
         document.head.appendChild(style);
     }
 
+    prevSlider() {
+        --this.option.position;
+        console.log(this.option.position)
 
+    }
+
+    nextSlider() {
+        ++this.option.position;
+        console.log(this.option.position)
+    }
+
+    controllSlider() {
+        this.prev.addEventListener('click', this.prevSlider.bind(this));
+
+        this.next.addEventListener('click', this.nextSlider.bind(this));
+    }
+
+    addErrow() {
+
+    }
+
+    init() {
+        this.addGloClass();
+        this.addStyle();
+        if (this.prev && this.next) {
+            this.controllSlider();
+
+        } else {
+            this.addErrow();
+            this.controllSlider();
+        }
+    }
 }
 
 
 const slider = new sliderCarusel({
     main: '.companies-wrapper',
-    wrap: '.companies-hor'
+    wrap: '.companies-hor',
+    prev: '.prev',
+    next: '.next',
+    slides: 3
 });
 
 
