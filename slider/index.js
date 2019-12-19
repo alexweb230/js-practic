@@ -8,8 +8,22 @@ class sliderCarusel {
 
     }
 
+    addGloClass(){
+        this.main.classList.add('.glo-slider');
+        this.wrap.classList.add('.glo-slider--wrap');
+        for(let item of this.slides){
+            item.classList.add('.glo-slider--item');
+        }
+    }
+    addStyle(){
+        const style = document.createElement('style');
+        style.id = 'sliderCarousel';
+        document.head.appendChild(style);
+    }
+
     init() {
-        console.log(this.slides)
+        this.addStyle();
+        this.addGloClass();
     }
 }
 
