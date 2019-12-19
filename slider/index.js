@@ -45,13 +45,15 @@ class sliderCarusel {
 
     prevSlider() {
         --this.option.position;
-        console.log(this.option.position)
+        console.log(this.option.position);
+        this.wrap.style.transform = `translateX(${this.option.position * this.option.widthSlider}%)`;
 
     }
 
     nextSlider() {
         ++this.option.position;
-        console.log(this.option.position)
+        console.log(this.option.position);
+        this.wrap.style.transform = `translateX(${this.option.position * this.option.widthSlider}%)`;
     }
 
     controllSlider() {
