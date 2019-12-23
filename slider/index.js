@@ -1,13 +1,13 @@
 'use strict';
 
 class sliderCarusel {
-    constructor({main, wrap, next, prev, position = 0, slides = 1}) {
+    constructor({main, wrap, next, prev, position = 0, slide = 1}) {
         this.main = document.querySelector(main);
         this.wrap = document.querySelector(wrap);
         this.slides = document.querySelector(wrap).children;
         this.next = document.querySelector(next);
         this.prev = document.querySelector(prev);
-        this.slidesToShow = slides;
+        this.slidesToShow = slide;
         this.option = {
             position,
             widthSlider: Math.floor(100 / this.slidesToShow)
@@ -44,7 +44,6 @@ class sliderCarusel {
     }
 
     prevSlider() {
-
         if(this.option.position > 0){
             --this.option.position;
             console.log(this.option.position);
@@ -55,14 +54,15 @@ class sliderCarusel {
     }
 
     nextSlider() {
-        ++this.option.position;
-        console.log(this.option.position);
-        this.wrap.style.transform = `translateX(-${this.option.position * this.option.widthSlider}%)`;
+        if(this.option.position < this.slides.length - this.slidesToShow){
+            ++this.option.position;
+            console.log(this.option.position);
+            this.wrap.style.transform = `translateX(-${this.option.position * this.option.widthSlider}%)`;
+        }
     }
 
     controllSlider() {
         this.prev.addEventListener('click', this.prevSlider.bind(this));
-
         this.next.addEventListener('click', this.nextSlider.bind(this));
     }
 
@@ -89,7 +89,7 @@ const slider = new sliderCarusel({
     wrap: '.companies-hor',
     prev: '.prev',
     next: '.next',
-    slides: 3
+    slide: 3
 });
 
 
