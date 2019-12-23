@@ -45,9 +45,12 @@ class sliderCarusel {
     }
 
     prevSlider() {
-        if(this.option.position > 0){
+        if(this.option.infinity || this.option.position > 0){
             --this.option.position;
             console.log(this.option.position);
+            if(this.option.position < 0){
+                this.option.position = this.slides.length - this.slidesToShow;
+            }
             this.wrap.style.transform = `translateX(-${this.option.position * this.option.widthSlider}%)`;
         }
     }
