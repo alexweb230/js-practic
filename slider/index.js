@@ -1,7 +1,7 @@
 'use strict';
 
 class sliderCarusel {
-    constructor({main, wrap, next, prev, position = 0, slide = 1}) {
+    constructor({main, wrap, next, prev, position = 0, slide = 1, infinity = false}) {
         this.main = document.querySelector(main);
         this.wrap = document.querySelector(wrap);
         this.slides = document.querySelector(wrap).children;
@@ -10,6 +10,7 @@ class sliderCarusel {
         this.slidesToShow = slide;
         this.option = {
             position,
+            infinity,
             widthSlider: Math.floor(100 / this.slidesToShow)
         }
 
@@ -49,14 +50,15 @@ class sliderCarusel {
             console.log(this.option.position);
             this.wrap.style.transform = `translateX(-${this.option.position * this.option.widthSlider}%)`;
         }
-
-
     }
 
     nextSlider() {
-        if(this.option.position < this.slides.length - this.slidesToShow){
+        if(this.option.infinity || this.option.position < this.slides.length - this.slidesToShow){
             ++this.option.position;
             console.log(this.option.position);
+            if(this.option.position > this.slides.length - this.slidesToShow){
+                this.option.position = 0;
+            }
             this.wrap.style.transform = `translateX(-${this.option.position * this.option.widthSlider}%)`;
         }
     }
@@ -89,7 +91,8 @@ const slider = new sliderCarusel({
     wrap: '.companies-hor',
     prev: '.prev',
     next: '.next',
-    slide: 3
+    slide: 3,
+    infinity: true
 });
 
 
