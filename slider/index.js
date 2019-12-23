@@ -91,7 +91,12 @@ class sliderCarusel {
         this.main.appendChild(this.prev);
         this.main.appendChild(this.next);
     }
+    responsiveInit(){
+        const slides = this.slidesToShow;
+        const allResponsive = this.responsive.map(r => r.breakpoint);
+        console.log(allResponsive);
 
+    }
     init() {
         this.addGloClass();
         this.addStyle();
@@ -101,6 +106,9 @@ class sliderCarusel {
         } else {
             this.addErrow();
             this.controllSlider();
+        }
+        if(this.responsive){
+            this.responsiveInit();
         }
     }
 }
