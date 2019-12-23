@@ -45,10 +45,10 @@ class sliderCarusel {
     }
 
     prevSlider() {
-        if(this.option.infinity || this.option.position > 0){
+        if (this.option.infinity || this.option.position > 0) {
             --this.option.position;
             console.log(this.option.position);
-            if(this.option.position < 0){
+            if (this.option.position < 0) {
                 this.option.position = this.slides.length - this.slidesToShow;
             }
             this.wrap.style.transform = `translateX(-${this.option.position * this.option.widthSlider}%)`;
@@ -56,10 +56,10 @@ class sliderCarusel {
     }
 
     nextSlider() {
-        if(this.option.infinity || this.option.position < this.slides.length - this.slidesToShow){
+        if (this.option.infinity || this.option.position < this.slides.length - this.slidesToShow) {
             ++this.option.position;
             console.log(this.option.position);
-            if(this.option.position > this.slides.length - this.slidesToShow){
+            if (this.option.position > this.slides.length - this.slidesToShow) {
                 this.option.position = 0;
             }
             this.wrap.style.transform = `translateX(-${this.option.position * this.option.widthSlider}%)`;
@@ -72,7 +72,14 @@ class sliderCarusel {
     }
 
     addErrow() {
-
+        this.prev = document.createElement('button');
+        this.next = document.createElement('button');
+        this.prev.classList.add('prev');
+        this.next.classList.add('next');
+        this.prev.textContent = 'prev';
+        this.next.textContent = 'next';
+        this.main.appendChild(this.prev);
+        this.main.appendChild(this.next);
     }
 
     init() {
@@ -92,8 +99,8 @@ class sliderCarusel {
 const slider = new sliderCarusel({
     main: '.companies-wrapper',
     wrap: '.companies-hor',
-    prev: '.prev',
-    next: '.next',
+    // prev: '.prev',
+    // next: '.next',
     slide: 3,
     infinity: true
 });
