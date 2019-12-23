@@ -15,4 +15,10 @@
 
 button{
 	cursor: pointer;
+	background-color: transparent;
+	border: 0;
+}
+.prev,
+.next{
+	border: 1px solid silver;
 }

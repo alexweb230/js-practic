@@ -1,7 +1,16 @@
 'use strict';
 
 class sliderCarusel {
-    constructor({main, wrap, next, prev, position = 0, slide = 1, infinity = false}) {
+    constructor({
+                    main,
+                    wrap,
+                    next,
+                    prev,
+                    position = 0,
+                    slide = 1,
+                    infinity = false,
+                    responsive = []
+                }) {
         this.main = document.querySelector(main);
         this.wrap = document.querySelector(wrap);
         this.slides = document.querySelector(wrap).children;
@@ -12,7 +21,8 @@ class sliderCarusel {
             position,
             infinity,
             widthSlider: Math.floor(100 / this.slidesToShow)
-        }
+        };
+        this.responsive = responsive;
 
     }
 
@@ -74,8 +84,8 @@ class sliderCarusel {
     addErrow() {
         this.prev = document.createElement('button');
         this.next = document.createElement('button');
-        this.prev.classList.add('prev');
-        this.next.classList.add('next');
+        this.prev.className = 'prev';
+        this.next.className = 'next';
         this.prev.textContent = 'prev';
         this.next.textContent = 'next';
         this.main.appendChild(this.prev);
@@ -99,10 +109,22 @@ class sliderCarusel {
 const slider = new sliderCarusel({
     main: '.companies-wrapper',
     wrap: '.companies-hor',
-    // prev: '.prev',
-    // next: '.next',
-    slide: 3,
-    infinity: true
+    slide: 4,
+    infinity: true,
+    responsive: [
+        {
+            breakpoint: 1024,
+            slide: 3
+        },
+        {
+            breakpoint: 768,
+            slide: 2
+        },
+        {
+            breakpoint: 576,
+            slide: 1
+        },
+    ]
 });
 
 
