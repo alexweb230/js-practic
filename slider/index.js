@@ -91,12 +91,25 @@ class sliderCarusel {
         this.main.appendChild(this.prev);
         this.main.appendChild(this.next);
     }
-    responsiveInit(){
+
+    responsiveInit() {
         const slides = this.slidesToShow;
         const allResponsive = this.responsive.map(r => r.breakpoint);
-        console.log(allResponsive);
+        const maxResponse = Math.max(...allResponsive);
+        const checkResponse = () => {
+            const widthWindow = document.documentElement.clientWidth;
+
+            if (widthWindow < maxResponse) {
+                 for(let i = 0; i < allResponsive.length; i++){
+                    this.slidesToShow = this.responsive[i].slidesToShow;
+                 }
+
+            }
+        }
+        checkResponse();
 
     }
+
     init() {
         this.addGloClass();
         this.addStyle();
@@ -107,7 +120,7 @@ class sliderCarusel {
             this.addErrow();
             this.controllSlider();
         }
-        if(this.responsive){
+        if (this.responsive) {
             this.responsiveInit();
         }
     }
