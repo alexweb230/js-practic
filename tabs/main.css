@@ -1,0 +1,10 @@
+.is--hidden{
+    display: none;
+}
+li{
+    cursor: pointer;
+}
+
+li.is--active{
+    color:red;
+}
