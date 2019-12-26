@@ -45,7 +45,6 @@ const tabs2 = new Tabs({
     event: 'mouseover',
     parent: '#tabs2'
 });
-
 tabs2.init();
 
 
