@@ -100,6 +100,7 @@ class sliderCarusel {
         const allResponsive = this.responsive.map(r => r.breakpoint);
         const maxResponse = Math.max(...allResponsive);
         const checkResponse = () => {
+
             const widthWindow = document.documentElement.clientWidth;
 
             if (widthWindow < maxResponse) {
@@ -109,13 +110,12 @@ class sliderCarusel {
                         this.option.widthSlider = Math.floor(100 / this.slidesToShow);
                         this.addStyle();
                     }
-
-
                 }
-
             }
         }
         checkResponse();
+
+        window.addEventListener('resize', checkResponse);
 
     }
 
