@@ -35,8 +35,11 @@ class sliderCarusel {
     }
 
     addStyle() {
-        const style = document.createElement('style');
-        style.id = 'sliderCarousel';
+        let style = document.getElementById('sliderCarousel');
+        if (!style) {
+            style = document.createElement('style');
+            style.id = 'sliderCarousel';
+        }
         style.textContent = `
            .glo-slider{
               overflow: hidden !important;
@@ -93,16 +96,22 @@ class sliderCarusel {
     }
 
     responsiveInit() {
-        const slides = this.slidesToShow;
+        const slidesDefault = this.slidesToShow;
         const allResponsive = this.responsive.map(r => r.breakpoint);
         const maxResponse = Math.max(...allResponsive);
         const checkResponse = () => {
             const widthWindow = document.documentElement.clientWidth;
 
             if (widthWindow < maxResponse) {
-                 for(let i = 0; i < allResponsive.length; i++){
-                    this.slidesToShow = this.responsive[i].slidesToShow;
-                 }
+                for (let i = 0; i < allResponsive.length; i++) {
+                    if (widthWindow < allResponsive[i]) {
+                        this.slidesToShow = this.responsive[i].slide;
+                        this.option.widthSlider = Math.floor(100 / this.slidesToShow);
+                        this.addStyle();
+                    }
+
+
+                }
 
             }
         }
