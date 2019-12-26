@@ -111,6 +111,10 @@ class sliderCarusel {
                         this.addStyle();
                     }
                 }
+            } else {
+                this.slidesToShow = slidesDefault;
+                this.option.widthSlider = Math.floor(100 / this.slidesToShow);
+                this.addStyle();
             }
         }
         checkResponse();
