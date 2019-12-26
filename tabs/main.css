@@ -1,10 +1,19 @@
-.is--hidden{
+.is--hidden {
     display: none;
 }
-li{
+
+li {
     cursor: pointer;
 }
 
-li.is--active{
-    color:red;
+li.is--active {
+    color: red;
+}
+
+.tabs-box--item {
+    display: none;
+}
+
+.tabs-box--item.is--active{
+    display: block;
 }
