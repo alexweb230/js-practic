@@ -3,11 +3,11 @@ class Video {
         this.$parentId = document.querySelector(options.parentId);
     }
 
-    get controlsPanel() {
-        return ` <div class="video-player-controls">
-                    <button class="but-play">play</button>
-                 </div>`
+    get buttonPlay(){
+        return document.querySelector(`${this.$parentId}`);
     }
+
+
 
     addVideo() {
         let player = document.createElement('video');
@@ -16,13 +16,30 @@ class Video {
     }
 
     addControls() {
-        this.$parentId.append(this.controlsPanel);
+        let controls = document.createElement('div');
+        controls.className = 'video-player-controls';
+        controls.innerHTML = '<button class="but-play">play</button>';
+
+        this.$parentId.append(controls);
+
+        console.log(this.buttonPlay)
+
+    }
+
+    playVideo(){
+        this.$parentId.addEventListener('click',  e => {
+            let target = e.target;
+            if(target === this.buttonPlay){
+                console.log('test');
+            }
+        })
     }
 
 
     init() {
         this.addVideo();
         this.addControls();
+        // this.playVideo();
     }
 }
 
