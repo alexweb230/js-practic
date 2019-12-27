@@ -3,14 +3,26 @@ class Video {
         this.$parentId = document.querySelector(options.parentId);
     }
 
-    addVideo(){
+    get controlsPanel() {
+        return ` <div class="video-player-controls">
+                    <button class="but-play">play</button>
+                 </div>`
+    }
 
-        console.log('add')
+    addVideo() {
+        let player = document.createElement('video');
+        player.src = this.$parentId.dataset.src;
+        this.$parentId.prepend(player);
+    }
+
+    addControls() {
+        this.$parentId.append(this.controlsPanel);
     }
 
 
     init() {
         this.addVideo();
+        this.addControls();
     }
 }
 
