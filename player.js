@@ -4,10 +4,14 @@ class Video {
     }
 
     video;
-    controlElement = {
-        btnPlay: '<button class="but-play">play</button>',
-        small: '<small> </small>'
-    };
+
+
+    controlTemplate = ` <button class="but-play is-paused">sss</button>
+                    <small>sss</small>
+                    <small>sss</small>
+                    <small>sss</small>
+                     <div>sss</div>`;
+
 
     addVideo() {
         let player = document.createElement('video');
@@ -18,22 +22,14 @@ class Video {
 
     addControls() {
         let controls = document.createElement('div');
-        controls.className = 'video-player-controls';
-        let control;
-        for (let it in this.controlElement) {
-            control = this.controlElement[it];
-            console.log(control);
-        }
-         controls.innerHTML = control;
-
+        controls.className = 'video-player--controls';
+        controls.innerHTML = this.controlTemplate;
         this.$parentId.append(controls);
-
-
     }
 
 
     playVideo() {
-        console.log(this.controlElement)
+
     }
 
 
