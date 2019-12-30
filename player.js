@@ -4,7 +4,7 @@ class Video {
     }
 
     video;
-
+    controls;
 
     controlTemplate = ` <button class="but-play is-paused">sss</button>
                     <small>sss</small>
@@ -21,15 +21,24 @@ class Video {
     }
 
     addControls() {
-        let controls = document.createElement('div');
-        controls.className = 'video-player--controls';
-        controls.innerHTML = this.controlTemplate;
-        this.$parentId.append(controls);
+        this.controls = document.createElement('div');
+        this.controls.className = 'video-player--controls';
+        this.controls.innerHTML = this.controlTemplate;
+        this.$parentId.append(this.controls);
+    }
+
+    get controlElements(){
+        return document.querySelector(`${this.$parentId}`);
+
     }
 
 
-    playVideo() {
 
+
+
+
+    playVideo() {
+        this.controlElements;
     }
 
 
