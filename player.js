@@ -10,6 +10,8 @@ class Video {
         return Array.from(arg);
     }
 
+    videoPlayer;
+
 
     controlTemplate = ` <button class="but-play">sss</button>
                     <small>sss</small>
@@ -38,20 +40,20 @@ class Video {
 
 
     play() {
+        this.videoPlayer = document.querySelector(`#${this.$parentId.id} .video`);
+        let btn = document.querySelector(`#${this.$parentId.id} .but-play`);
         this.$parentId.addEventListener('click', e => {
             let target = e.target;
-            let btn = document.querySelector(`#${this.$parentId.id} .but-play`);
-            let player = document.querySelector(`#${this.$parentId.id} .video`);
-
-            if (target === player && player.paused || target === btn && player.paused) {
-                player.play();
+            if (target === this.videoPlayer && this.videoPlayer.paused || target === btn && this.videoPlayer.paused) {
+                this.videoPlayer.play();
                 btn.classList.add('is--played');
                 this.$parentId.classList.add('is--played');
             } else {
-                player.pause();
+                this.videoPlayer.pause();
                 btn.classList.remove('is--played');
                 this.$parentId.classList.remove('is--played');
             }
+
 
         });
     }
