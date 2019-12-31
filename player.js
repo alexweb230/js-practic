@@ -53,8 +53,6 @@ class Video {
                 btn.classList.remove('is--played');
                 this.$parentId.classList.remove('is--played');
             }
-
-
         });
     }
 
