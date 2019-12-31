@@ -14,9 +14,9 @@ class Video {
 
 
     controlTemplate = ` <button class="but-play">sss</button>
-                    <small>sss</small>
-                    <small>sss</small>
-                    <small>sss</small>
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
                      <div>sss</div>`;
 
 
@@ -56,11 +56,21 @@ class Video {
         });
     }
 
+    progress() {
+        let field = document.querySelector(`#${this.$parentId.id} .progress`);
+        this.videoPlayer.addEventListener('timeupdate', () => {
+            let progress = this.videoPlayer.currentTime / this.videoPlayer.duration;
+
+
+        });
+    }
+
 
     init() {
         this.addVideo();
         this.addControls();
         this.play();
+        this.progress();
     }
 }
 

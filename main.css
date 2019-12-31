@@ -19,6 +19,7 @@ button{
     border: 0;
     background-color: transparent;
     outline: none;
+    padding: 0;
 }
 .video{
     width: 100%;
@@ -63,7 +64,21 @@ button{
     right: 0;
     background: rgba(0,0,0, .8);
     z-index: 100;
+    display: flex;
+    align-items: center;
+    padding: .4em;
 }
+.progress-bar{
+   height: 7px;
+    background: white;
+    width: 100%;
+    border-radius: 2px;
+}
+.progress-bar .progress{
+    background:#01E7FD;
+    height: 100%;
+}
+
 .video.is--play{
 
 }
