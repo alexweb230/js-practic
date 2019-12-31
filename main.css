@@ -1,5 +1,6 @@
 :root{
     box-sizing: border-box;
+    --fz-base: 1rem;
 }
 
 *,
@@ -10,4 +11,66 @@
 
 body{
     margin: 0;
+    font-size: var(--fz-base);
+}
+
+button{
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+}
+.video{
+    width: 100%;
+    max-height: inherit;
+    cursor: pointer;
+    filter: brightness(20%);
+}
+
+.video-player--wrap{
+    position: relative;
+    background: black;
+    font-size: var(--fz, 1em);
+
+}
+
+.video-player--wrap:before{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    top:50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 3em;
+    height: 3em;
+    background: url("img/play.svg") no-repeat center;
+    background-size: cover;
+    cursor: pointer;
+}
+.video-player--wrap.is--played:before{
+    display: none;
+}
+
+.video-player--wrap.is--played .video{
+    filter: initial;
+}
+
+.video-player--controls{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0, .8);
+    z-index: 100;
+}
+.video.is--play{
+
+}
+
+@media all and (min-width: 600px) {
+    .video-player--wrap{
+        --fz: 1.7em;
+    }
+
 }

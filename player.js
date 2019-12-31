@@ -2,6 +2,8 @@ class Video {
     constructor(options) {
         this.$parentId = document.querySelector(options.parentId);
         this.width = options.width;
+        this.maxheight = options.maxheight;
+        this.maxwidth = options.maxwidth;
     }
 
     arrBuild(arg) {
@@ -9,7 +11,7 @@ class Video {
     }
 
 
-    controlTemplate = ` <button class="but-play is-paused">sss</button>
+    controlTemplate = ` <button class="but-play">sss</button>
                     <small>sss</small>
                     <small>sss</small>
                     <small>sss</small>
@@ -21,7 +23,9 @@ class Video {
         player.className = 'video';
         player.src = this.$parentId.dataset.src;
         this.$parentId.prepend(player);
-        player.style.width = this.width;
+        this.$parentId.style.width = this.width;
+        this.$parentId.style.maxHeight = this.maxheight;
+        this.$parentId.style.maxWidth = this.maxwidth;
 
     }
 
@@ -39,9 +43,14 @@ class Video {
             let btn = document.querySelector(`#${this.$parentId.id} .but-play`);
             let player = document.querySelector(`#${this.$parentId.id} .video`);
 
-            if (target === player || target === btn) {
+            if (target === player && player.paused || target === btn && player.paused) {
                 player.play();
-                console.log(btn)
+                btn.classList.add('is--played');
+                this.$parentId.classList.add('is--played');
+            } else {
+                player.pause();
+                btn.classList.remove('is--played');
+                this.$parentId.classList.remove('is--played');
             }
 
         });
@@ -57,6 +66,8 @@ class Video {
 
 const video = new Video({
     parentId: '#video',
-    width: '100%'
+    width: '100%',
+    maxwidth: '1000px',
+    maxheight: '500px'
 
 }).init();
