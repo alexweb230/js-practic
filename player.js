@@ -6,14 +6,28 @@ class Video {
         this.maxwidth = options.maxwidth;
     }
 
-    arrBuild(arg) {
+    static arrBuild(arg) {
         return Array.from(arg);
     }
 
-    videoPlayer;
+    get videoPlayer() {
+        return document.querySelector(`#${this.$parentId.id} .video`);
+    }
+
+    get playPaused() {
+        return document.querySelector(`#${this.$parentId.id} .but-play`);
+    }
+
+    get progressBar() {
+        return document.querySelector(`#${this.$parentId.id} .progress`);
+    }
+    get time() {
+        return document.querySelector(`#${this.$parentId.id} .time`);
+    }
 
 
     controlTemplate = ` <button class="but-play"></button>
+                        <div class="time"></div>
                         <div class="progress-bar">
                             <div class="progress"></div>
                         </div>
@@ -40,18 +54,16 @@ class Video {
 
 
     play() {
-        this.videoPlayer = document.querySelector(`#${this.$parentId.id} .video`);
-        let btn = document.querySelector(`#${this.$parentId.id} .but-play`);
         this.$parentId.addEventListener('click', e => {
             let target = e.target;
-            if (target === this.videoPlayer ||  target === btn) {
-                if(this.videoPlayer.paused){
+            if (target === this.videoPlayer || target === this.playPaused) {
+                if (this.videoPlayer.paused) {
                     this.videoPlayer.play();
-                    btn.classList.add('is--played');
+                    this.playPaused.classList.add('is--played');
                     this.$parentId.classList.add('is--played');
-                } else if(this.videoPlayer.played){
+                } else if (this.videoPlayer.played) {
                     this.videoPlayer.pause();
-                    btn.classList.remove('is--played');
+                    this.playPaused.classList.remove('is--played');
                     this.$parentId.classList.remove('is--played');
                 }
 
@@ -61,11 +73,17 @@ class Video {
     }
 
     progress() {
-        let field = document.querySelector(`#${this.$parentId.id} .progress`);
-        this.videoPlayer.addEventListener('timeupdate', () => {
-            let progress = this.videoPlayer.currentTime / this.videoPlayer.duration;
+        this.time.textContent = this.videoPlayer.currentTime;
 
-            field.style.width = `${progress * 100}%`;
+        this.videoPlayer.addEventListener('timeupdate', () => {
+            let prog = this.videoPlayer.currentTime / this.videoPlayer.duration;
+            this.progressBar.style.width = `${prog * 100}%`;
+            if (this.videoPlayer.ended) {
+                this.playPaused.classList.remove('is--played');
+                this.$parentId.classList.remove('is--played');
+            }
+            this.time.textContent = Math.floor(this.videoPlayer.currentTime);
+            console.log(this.time);
         });
     }
 
@@ -75,6 +93,7 @@ class Video {
         this.addControls();
         this.play();
         this.progress();
+
     }
 }
 

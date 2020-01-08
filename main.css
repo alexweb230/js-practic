@@ -1,20 +1,20 @@
-:root{
+:root {
     box-sizing: border-box;
     --fz-base: 1rem;
 }
 
 *,
 *:before,
-*:after{
+*:after {
     box-sizing: inherit;
 }
 
-body{
+body {
     margin: 0;
     font-size: var(--fz-base);
 }
 
-button{
+button {
     cursor: pointer;
     border: 0;
     background-color: transparent;
@@ -22,7 +22,7 @@ button{
     padding: 0;
 }
 
-.video{
+.video {
     width: 100%;
     max-height: inherit;
     cursor: pointer;
@@ -30,19 +30,20 @@ button{
     display: block;
 }
 
-.video-player--wrap{
+.video-player--wrap {
     position: relative;
     background: black;
     font-size: var(--fz, 1em);
+    color: white;
 
 }
 
-.video-player--wrap:before{
+.video-player--wrap:before {
     content: '';
     position: absolute;
     z-index: 2;
     pointer-events: none;
-    top:50%;
+    top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     width: 3em;
@@ -51,52 +52,63 @@ button{
     background-size: cover;
     cursor: pointer;
 }
-.video-player--wrap.is--played:before{
+
+.video-player--wrap.is--played:before {
     display: none;
 }
 
-.video-player--wrap.is--played .video{
+.video-player--wrap.is--played .video {
     filter: initial;
 }
 
-.video-player--controls{
+.video-player--controls {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0,0,0, .8);
+    background: rgba(0, 0, 0, .8);
     z-index: 100;
     display: flex;
     align-items: center;
     padding: .4em;
     transition: .4s;
 }
-.video-player--controls * + *{
+
+.video-player--controls * + * {
     margin-left: .7em;
 }
-.progress-bar{
-   height: 7px;
+
+.progress-bar {
+    height: 7px;
     background: white;
     width: 100%;
     border-radius: 2px;
 }
-.progress-bar .progress{
-    background:#01E7FD;
+
+.progress-bar .progress {
+    background: #01E7FD;
     height: 100%;
-    width:0;
+    width: 0;
 }
 
-.video.is--play{
+.video.is--play {
 
 }
-.but-play{
+
+.but-play {
     background: url("img/play-button.svg") no-repeat center;
     background-size: 100%;
     width: 1em;
-    height:1em;
+    height: 1em;
 }
+
+.but-play.is--played {
+    background: url("img/pause-button.svg") no-repeat center;
+    background-size: 100%;
+}
+
 @media all and (min-width: 600px) {
-    .video-player--wrap{
+    .video-player--wrap {
         --fz: 1.7em;
     }
 
