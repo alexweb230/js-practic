@@ -21,6 +21,7 @@ button{
     outline: none;
     padding: 0;
 }
+
 .video{
     width: 100%;
     max-height: inherit;
@@ -68,6 +69,10 @@ button{
     display: flex;
     align-items: center;
     padding: .4em;
+    transition: .4s;
+}
+.video-player--controls * + *{
+    margin-left: .7em;
 }
 .progress-bar{
    height: 7px;
@@ -84,7 +89,12 @@ button{
 .video.is--play{
 
 }
-
+.but-play{
+    background: url("img/play-button.svg") no-repeat center;
+    background-size: 100%;
+    width: 1em;
+    height:1em;
+}
 @media all and (min-width: 600px) {
     .video-player--wrap{
         --fz: 1.7em;

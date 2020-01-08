@@ -13,7 +13,7 @@ class Video {
     videoPlayer;
 
 
-    controlTemplate = ` <button class="but-play">sss</button>
+    controlTemplate = ` <button class="but-play"></button>
                         <div class="progress-bar">
                             <div class="progress"></div>
                         </div>
@@ -44,16 +44,19 @@ class Video {
         let btn = document.querySelector(`#${this.$parentId.id} .but-play`);
         this.$parentId.addEventListener('click', e => {
             let target = e.target;
-            if (target === this.videoPlayer && this.videoPlayer.paused || target === btn && this.videoPlayer.paused) {
-                this.videoPlayer.play();
-                btn.classList.add('is--played');
-                this.$parentId.classList.add('is--played');
-            } else {
-                this.videoPlayer.pause();
-                btn.classList.remove('is--played');
-                this.$parentId.classList.remove('is--played');
+            if (target === this.videoPlayer ||  target === btn) {
+                if(this.videoPlayer.paused){
+                    this.videoPlayer.play();
+                    btn.classList.add('is--played');
+                    this.$parentId.classList.add('is--played');
+                } else if(this.videoPlayer.played){
+                    this.videoPlayer.pause();
+                    btn.classList.remove('is--played');
+                    this.$parentId.classList.remove('is--played');
+                }
+
             }
-            console.log(this.videoPlayer);
+
         });
     }
 
