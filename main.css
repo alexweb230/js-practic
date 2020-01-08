@@ -26,6 +26,7 @@ button{
     max-height: inherit;
     cursor: pointer;
     filter: brightness(20%);
+    display: block;
 }
 
 .video-player--wrap{
@@ -77,6 +78,7 @@ button{
 .progress-bar .progress{
     background:#01E7FD;
     height: 100%;
+    width:0;
 }
 
 .video.is--play{

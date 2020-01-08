@@ -53,6 +53,7 @@ class Video {
                 btn.classList.remove('is--played');
                 this.$parentId.classList.remove('is--played');
             }
+            console.log(this.videoPlayer);
         });
     }
 
@@ -61,7 +62,7 @@ class Video {
         this.videoPlayer.addEventListener('timeupdate', () => {
             let progress = this.videoPlayer.currentTime / this.videoPlayer.duration;
 
-
+            field.style.width = `${progress * 100}%`;
         });
     }
 
