@@ -21,17 +21,27 @@ class Video {
     get progressBar() {
         return document.querySelector(`#${this.$parentId.id} .progress`);
     }
-    get time() {
-        return document.querySelector(`#${this.$parentId.id} .time`);
+
+    get curtimetext() {
+        return document.querySelector(`#${this.$parentId.id} .time .current-time`);
+    }
+
+    get durtimetext() {
+        return document.querySelector(`#${this.$parentId.id} .time .duration-time`);
     }
 
 
-    controlTemplate = ` <button class="but-play"></button>
-                        <div class="time"></div>
+    controlTemplate = ` 
+                        <button class="but-play"></button>
+                        <div class="time">
+                           <span class="current-time"></span> /
+                           <span class="duration-time"></span>
+                        </div>
                         <div class="progress-bar">
                             <div class="progress"></div>
                         </div>
-                     <div>sss</div>`;
+                         <div>sss</div>
+                    `;
 
 
     addVideo() {
@@ -52,7 +62,6 @@ class Video {
         this.$parentId.append(controls);
     }
 
-
     play() {
         this.$parentId.addEventListener('click', e => {
             let target = e.target;
@@ -66,24 +75,33 @@ class Video {
                     this.playPaused.classList.remove('is--played');
                     this.$parentId.classList.remove('is--played');
                 }
-
             }
-
         });
     }
 
     progress() {
-        this.time.textContent = this.videoPlayer.currentTime;
-
         this.videoPlayer.addEventListener('timeupdate', () => {
+            let curmins = Math.floor(this.videoPlayer.currentTime / 60),
+                cursecs = Math.floor(this.videoPlayer.currentTime - curmins * 60),
+                durmins = Math.floor(this.videoPlayer.duration / 60),
+                dursecs = Math.floor(this.videoPlayer.duration - durmins * 60);
+            if (cursecs < 10) {
+                cursecs = '0' + cursecs;
+            }
+            if (dursecs < 10) {
+                dursecs = '0' + dursecs;
+            }
+
+            this.curtimetext.innerHTML = curmins + ':' + cursecs;
+            this.durtimetext.innerHTML = durmins + ':' + dursecs;
+
+
             let prog = this.videoPlayer.currentTime / this.videoPlayer.duration;
             this.progressBar.style.width = `${prog * 100}%`;
             if (this.videoPlayer.ended) {
                 this.playPaused.classList.remove('is--played');
                 this.$parentId.classList.remove('is--played');
             }
-            this.time.textContent = Math.floor(this.videoPlayer.currentTime);
-            console.log(this.time);
         });
     }
 
