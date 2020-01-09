@@ -81,22 +81,11 @@ class Video {
     }
 
     progress() {
+
         this.videoPlayer.addEventListener('canplay', () => {
-            let curmins = Math.floor(this.videoPlayer.currentTime / 60),
-                cursecs = Math.floor(this.videoPlayer.currentTime - curmins * 60),
-                durmins = Math.floor(this.videoPlayer.duration / 60),
-                dursecs = Math.floor(this.videoPlayer.duration - durmins * 60);
-            if (cursecs < 10) {
-                cursecs = '0' + cursecs;
-            }
-            if (dursecs < 10) {
-                dursecs = '0' + dursecs;
-            }
-
-            this.curtimetext.innerHTML = curmins + ':' + cursecs;
-            this.durtimetext.innerHTML = durmins + ':' + dursecs;
-
+            this.canPlayVideo();
         });
+
         this.videoPlayer.addEventListener('timeupdate', () => {
             let prog = this.videoPlayer.currentTime / this.videoPlayer.duration;
             this.progressBar.style.width = `${prog * 100}%`;
@@ -104,21 +93,23 @@ class Video {
                 this.playPaused.classList.remove('is--played');
                 this.$parentId.classList.remove('is--played');
             }
-
-            let curmins = Math.floor(this.videoPlayer.currentTime / 60),
-                cursecs = Math.floor(this.videoPlayer.currentTime - curmins * 60),
-                durmins = Math.floor(this.videoPlayer.duration / 60),
-                dursecs = Math.floor(this.videoPlayer.duration - durmins * 60);
-            if (cursecs < 10) {
-                cursecs = '0' + cursecs;
-            }
-            if (dursecs < 10) {
-                dursecs = '0' + dursecs;
-            }
-
-            this.curtimetext.innerHTML = curmins + ':' + cursecs;
-            this.durtimetext.innerHTML = durmins + ':' + dursecs;
+            this.canPlayVideo();
         });
+    }
+
+    canPlayVideo() {
+        let curmins = Math.floor(this.videoPlayer.currentTime / 60),
+            cursecs = Math.floor(this.videoPlayer.currentTime - curmins * 60),
+            durmins = Math.floor(this.videoPlayer.duration / 60),
+            dursecs = Math.floor(this.videoPlayer.duration - durmins * 60);
+        if (cursecs < 10) {
+            cursecs = '0' + cursecs;
+        }
+        if (dursecs < 10) {
+            dursecs = '0' + dursecs;
+        }
+        this.curtimetext.innerHTML = curmins + ':' + cursecs;
+        this.durtimetext.innerHTML = durmins + ':' + dursecs;
     }
 
     init() {
