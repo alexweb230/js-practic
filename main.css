@@ -74,7 +74,7 @@ button {
     transition: .4s;
 }
 
-.video-player--controls * + * {
+.video-player--controls > * + * {
     margin-left: .7em;
 }
 
@@ -106,7 +106,10 @@ button {
     background: url("img/pause-button.svg") no-repeat center;
     background-size: 100%;
 }
-
+.time{
+    display: flex;
+    align-items: center;
+}
 @media all and (min-width: 600px) {
     .video-player--wrap {
         --fz: 1.7em;

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="483f02ec-1e06-42d8-8e7d-a76bfeb4357a" name="Default" comment="">
+    <list default="true" id="483f02ec-1e06-42d8-8e7d-a76bfeb4357a" name="Default" comment="video">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/player.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +109,7 @@
       <workItem from="1578572173244" duration="200000" />
       <workItem from="1578572393877" duration="4171000" />
       <workItem from="1578578787360" duration="136000" />
-      <workItem from="1578578952291" duration="3617000" />
+      <workItem from="1578578952291" duration="4316000" />
     </task>
     <task id="LOCAL-00001" summary="prototype">
       <created>1574671222612</created>
@@ -236,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578495107571</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="video">
+      <created>1578582581459</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1578582581459</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,10 +256,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="video" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2" timestamp="1578582580960">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578582580960" />
     <state x="619" y="147" key="SettingsEditor" timestamp="1578572373326">
       <screen x="53" y="24" width="1867" height="1056" />
     </state>
     <state x="619" y="147" key="SettingsEditor/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578572373326" />
+    <state x="2506" y="263" key="Vcs.Push.Dialog.v2" timestamp="1578582584006">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2506" y="263" key="Vcs.Push.Dialog.v2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578582584006" />
     <state x="2679" y="459" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578571700852">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>

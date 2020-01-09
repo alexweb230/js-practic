@@ -34,8 +34,9 @@ class Video {
     controlTemplate = ` 
                         <button class="but-play"></button>
                         <div class="time">
-                           <span class="current-time"></span> /
-                           <span class="duration-time"></span>
+                           <small class="current-time"></small> 
+                           &nbsp;/&nbsp;
+                           <small class="duration-time"></small>
                         </div>
                         <div class="progress-bar">
                             <div class="progress"></div>
@@ -105,13 +106,11 @@ class Video {
         });
     }
 
-
     init() {
         this.addVideo();
         this.addControls();
         this.play();
         this.progress();
-
     }
 }
 
