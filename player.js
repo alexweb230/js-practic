@@ -133,8 +133,6 @@ class Video {
         progress.addEventListener('mousemove', e => mouse && scb(e));
         progress.addEventListener('mousedown', () => mouse = true);
         progress.addEventListener('mouseup', () => mouse = false);
-
-
     }
 
     // инит  плеера
