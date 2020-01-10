@@ -6,10 +6,12 @@ class Video {
         this.maxwidth = options.maxwidth;
     }
 
+    // метод  преоброзование из колекции в массив
     static arrBuild(arg) {
         return Array.from(arg);
     }
 
+    //еллементы  разметки DOM
     get videoPlayer() {
         return document.querySelector(`#${this.$parentId.id} .video`);
     }
@@ -30,7 +32,7 @@ class Video {
         return document.querySelector(`#${this.$parentId.id} .time .duration-time`);
     }
 
-
+    //шаблон разметки
     controlTemplate = ` 
                         <button class="but-play"></button>
                         <div class="time">
@@ -44,7 +46,7 @@ class Video {
                          <div>sss</div>
                     `;
 
-
+    //добавление и настройки плеера
     addVideo() {
         let player = document.createElement('video');
         player.className = 'video';
@@ -56,6 +58,7 @@ class Video {
 
     }
 
+    // добавляет разметку контрольной панели
     addControls() {
         let controls = document.createElement('div');
         controls.className = 'video-player--controls';
@@ -63,6 +66,7 @@ class Video {
         this.$parentId.append(controls);
     }
 
+    // кнопки play
     play() {
         this.$parentId.addEventListener('click', e => {
             let target = e.target;
@@ -80,6 +84,7 @@ class Video {
         });
     }
 
+    // прогресс бар
     progress() {
 
         this.videoPlayer.addEventListener('canplay', () => {
@@ -94,9 +99,13 @@ class Video {
                 this.$parentId.classList.remove('is--played');
             }
             this.canPlayVideo();
+
         });
+
+        this.scrub();
     }
 
+    // таймер
     canPlayVideo() {
         let curmins = Math.floor(this.videoPlayer.currentTime / 60),
             cursecs = Math.floor(this.videoPlayer.currentTime - curmins * 60),
@@ -110,6 +119,15 @@ class Video {
         }
         this.curtimetext.innerHTML = curmins + ':' + cursecs;
         this.durtimetext.innerHTML = durmins + ':' + dursecs;
+    }
+
+    //перетягивание ползунка
+    scrub() {
+        let progress = this.progressBar.parentNode;
+        progress.addEventListener('click', e => {
+            let scrubTime = (e.offsetX / progress.offsetWidth) * this.videoPlayer.duration;
+            this.videoPlayer.currentTime = scrubTime;
+        })
     }
 
     init() {
