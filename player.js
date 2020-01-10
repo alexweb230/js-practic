@@ -124,16 +124,19 @@ class Video {
     //перетягивание ползунка
     scrub() {
         let progress = this.progressBar.parentNode;
-        progress.addEventListener('click', e => {
+        let mouse = false;
+        let scb = e => {
             let scrubTime = (e.offsetX / progress.offsetWidth) * this.videoPlayer.duration;
             this.videoPlayer.currentTime = scrubTime;
-        });
+        }
+        progress.addEventListener('click', scb);
+        progress.addEventListener('mousemove', e => mouse && scb(e));
+        progress.addEventListener('mousedown', () => mouse = true);
+        progress.addEventListener('mouseup', () => mouse = false);
 
-        progress.addEventListener('mousemove', e => {
-            let scrubTime = (e.offsetX / progress.offsetWidth) * this.videoPlayer.duration;
-            this.videoPlayer.currentTime = scrubTime;
-        })
+
     }
+
     // инит  плеера
     init() {
         this.addVideo();
@@ -142,6 +145,7 @@ class Video {
         this.progress();
     }
 }
+
 // инит  плеера
 const video = new Video({
     parentId: '#video',

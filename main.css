@@ -83,12 +83,14 @@ button {
     background: white;
     width: 100%;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 .progress-bar .progress {
     background: #01E7FD;
     height: 100%;
     width: 0;
+    cursor: pointer;
 }
 
 .video.is--play {
