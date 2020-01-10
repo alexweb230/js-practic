@@ -127,9 +127,14 @@ class Video {
         progress.addEventListener('click', e => {
             let scrubTime = (e.offsetX / progress.offsetWidth) * this.videoPlayer.duration;
             this.videoPlayer.currentTime = scrubTime;
+        });
+
+        progress.addEventListener('mousemove', e => {
+            let scrubTime = (e.offsetX / progress.offsetWidth) * this.videoPlayer.duration;
+            this.videoPlayer.currentTime = scrubTime;
         })
     }
-
+    // инит  плеера
     init() {
         this.addVideo();
         this.addControls();
@@ -137,7 +142,7 @@ class Video {
         this.progress();
     }
 }
-
+// инит  плеера
 const video = new Video({
     parentId: '#video',
     width: '100%',
