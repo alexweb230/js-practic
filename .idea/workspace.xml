@@ -109,7 +109,7 @@
       <workItem from="1578578787360" duration="136000" />
       <workItem from="1578578952291" duration="11260000" />
       <workItem from="1578650250421" duration="5301000" />
-      <workItem from="1578897686231" duration="491000" />
+      <workItem from="1578897686231" duration="908000" />
     </task>
     <task id="LOCAL-00001" summary="prototype">
       <created>1574671222612</created>
@@ -300,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578656358207</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="video">
+      <created>1578898184694</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1578898184694</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,10 +319,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="video" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2" timestamp="1578656358106">
+    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2" timestamp="1578898184082">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578656358106" />
+    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578898184082" />
     <state x="2702" y="252" key="RollbackChangesDialog" timestamp="1578655510405">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -324,10 +331,10 @@
       <screen x="53" y="24" width="1867" height="1056" />
     </state>
     <state x="398" y="222" key="SettingsEditor/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578645352689" />
-    <state x="2506" y="263" key="Vcs.Push.Dialog.v2" timestamp="1578656346418">
+    <state x="2506" y="263" key="Vcs.Push.Dialog.v2" timestamp="1578898187278">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2506" y="263" key="Vcs.Push.Dialog.v2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578656346418" />
+    <state x="2506" y="263" key="Vcs.Push.Dialog.v2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578898187278" />
     <state x="2679" y="459" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578571700852">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
