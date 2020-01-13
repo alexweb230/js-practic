@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="483f02ec-1e06-42d8-8e7d-a76bfeb4357a" name="Default" comment="range-volume">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/range-volume/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/range-volume/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/range-volume/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/range-volume/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,12 +38,6 @@
     <annotation-enable>false</annotation-enable>
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1973" />
-    <option name="y" value="-4" />
-    <option name="width" value="1867" />
-    <option name="height" value="1084" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">

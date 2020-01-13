@@ -1,5 +1,6 @@
 let range = document.querySelector('.range-box');
 let moveProgress = document.querySelector('.range');
+let offset = range.offsetWidth;
 
 let mouse = false;
 
@@ -10,9 +11,8 @@ range.addEventListener('mouseup',  () => mouse = false);
 
 
 function rangeMove(e) {
-    let total = `${e.offsetX / 100 }%`;
-    let offset = this;
-    console.log(total);
-    console.log(offset);
+    let total = `${(e.offsetX / offset) * 100}%`;
     mouse = true;
+    moveProgress.style.width = total;
+    console.log(total);
 }
