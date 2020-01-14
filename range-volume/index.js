@@ -9,6 +9,7 @@ moveProgress.style.width = `${defuultVolume}%`;
 range.addEventListener('mousedown',  rangeMove);
 range.addEventListener('mousemove',  e => mouse && rangeMove(e));
 range.addEventListener('mouseup',  () => mouse = false);
+window.document.body.addEventListener('mouseup',  () => mouse = false);
 
 
 function rangeMove(e) {
@@ -16,4 +17,5 @@ function rangeMove(e) {
     let total = `${(e.offsetX / offset) * 100}%`;
     mouse = true;
     moveProgress.style.width = total;
+    moveProgress.dataset.volume = total;
 }
