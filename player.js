@@ -153,17 +153,19 @@ class Video {
         btnMove.style.height = `${defaultVol}%`;
 
         let rangeMove = e => {
-            let total =  this.range.offsetHeight - e.offsetY;
+            let offset = this.range.offsetHeight;
+            let different = `${((this.range.offsetHeight - e.offsetY) / offset) * 100}`;
             mouse = true;
-            btnMove.style.height = `${total}%`;
-            let vol = btnMove.dataset.volume = total / 100;
+            btnMove.style.height = different + '%';
 
-              this.videoPlayer.volume = vol;
+            let vol = btnMove.dataset.volume = different / 100;
+            this.videoPlayer.volume = vol;
+            console.log(vol)
         }
-        this.range.addEventListener('mousedown',  rangeMove);
-        this.range.addEventListener('mousemove',  e => mouse && rangeMove(e));
-        this.range.addEventListener('mouseup',  () => mouse = false);
-        this.$parentId.addEventListener('mouseup',  () => mouse = false);
+        this.range.addEventListener('mousedown', rangeMove);
+        this.range.addEventListener('mousemove', e => mouse && rangeMove(e));
+        this.range.addEventListener('mouseup', () => mouse = false);
+        this.range.addEventListener('mouseout', () => mouse = false);
     }
 
     // инит  плеера

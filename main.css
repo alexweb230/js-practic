@@ -118,7 +118,7 @@ button {
     position: relative;
 }
 .range-box {
-    height: 100px;
+    height: 150px;
     background: white;
     width: 20px;
     cursor: pointer;
@@ -129,7 +129,6 @@ button {
 }
 
 .range {
-    height: 20%;
     background: red;
     width: 100%;
     position: absolute;
