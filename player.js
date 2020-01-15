@@ -32,9 +32,19 @@ class Video {
         return document.querySelector(`#${this.$parentId.id} .time .duration-time`);
     }
 
+    get range() {
+        return document.querySelector(`#${this.$parentId.id} .range-box`);
+    }
+
     //шаблон разметки
     controlTemplate = ` 
                         <button class="but-play"></button>
+                        <div class="volume">
+                            <button class="btn-volume"></button>
+                            <div class="range-box">
+                                <div class="range" data-volume="30"></div>
+                            </div>
+                        </div>
                         <div class="time">
                            <small class="current-time"></small> 
                            &nbsp;/&nbsp;
@@ -136,8 +146,24 @@ class Video {
     }
 
     //volume
-    volume(){
-        console.log('volume');
+    volume() {
+        let btnMove = this.range.querySelector('.range');
+        let mouse = false;
+        let defaultVol = btnMove.dataset.volume;
+        btnMove.style.height = `${defaultVol}%`;
+
+        let rangeMove = e => {
+            let total =  this.range.offsetHeight - e.offsetY;
+            mouse = true;
+            btnMove.style.height = `${total}%`;
+            let vol = btnMove.dataset.volume = total / 100;
+
+              this.videoPlayer.volume = vol;
+        }
+        this.range.addEventListener('mousedown',  rangeMove);
+        this.range.addEventListener('mousemove',  e => mouse && rangeMove(e));
+        this.range.addEventListener('mouseup',  () => mouse = false);
+        this.$parentId.addEventListener('mouseup',  () => mouse = false);
     }
 
     // инит  плеера
