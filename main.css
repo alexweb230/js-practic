@@ -118,35 +118,36 @@ button {
     position: relative;
 }
 .range-box {
-    height: 150px;
-    background: white;
+    height: 2.2em;
+    background: linear-gradient(90deg, transparent 40%,  white 40%, white 60%, transparent 60%);
     width: 20px;
     cursor: pointer;
     border-radius: 3px;
     position: absolute;
     bottom: 100%;
-    left: 0;
+    left: -3px;
 }
 
 .range {
-    background: red;
+    background: linear-gradient(90deg, transparent 40%, #01E7FD 40%, #01E7FD 60%, transparent 60%);
     width: 100%;
     position: absolute;
     bottom: 0;
     pointer-events: none;
 }
 .range:after{
-    /*content: '';*/
-    /*position: absolute;*/
-    /*width: 40px;*/
-    /*height: 40px;*/
-    /*border-radius: 50%;*/
-    /*left: -10px;*/
-    /*bottom: 100%;*/
-    /*margin-bottom: -25px;*/
-    /*background: yellow;*/
-    /*cursor: pointer;*/
-    /*pointer-events: none;*/
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -3px;
+
+    background: cornsilk;
+    cursor: pointer;
+    pointer-events: none;
 }
 .btn-volume{
     background: url("img/volume.svg") no-repeat center;

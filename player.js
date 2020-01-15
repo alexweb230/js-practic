@@ -4,6 +4,7 @@ class Video {
         this.width = options.width;
         this.maxheight = options.maxheight;
         this.maxwidth = options.maxwidth;
+        this.defVolume = options.volume;
     }
 
     // метод  преоброзование из колекции в массив
@@ -42,7 +43,7 @@ class Video {
                         <div class="volume">
                             <button class="btn-volume"></button>
                             <div class="range-box">
-                                <div class="range" data-volume="30"></div>
+                                <div class="range"></div>
                             </div>
                         </div>
                         <div class="time">
@@ -149,8 +150,6 @@ class Video {
     volume() {
         let btnMove = this.range.querySelector('.range');
         let mouse = false;
-        let defaultVol = btnMove.dataset.volume;
-        btnMove.style.height = `${defaultVol}%`;
 
         let rangeMove = e => {
             let offset = this.range.offsetHeight;
@@ -158,10 +157,12 @@ class Video {
             mouse = true;
             btnMove.style.height = different + '%';
 
-            let vol = btnMove.dataset.volume = different / 100;
-            this.videoPlayer.volume = vol;
-            console.log(vol)
+            this.videoPlayer.volume = different / 100;
+
+
+
         }
+        // this.range.addEventListener('click', rangeMove);
         this.range.addEventListener('mousedown', rangeMove);
         this.range.addEventListener('mousemove', e => mouse && rangeMove(e));
         this.range.addEventListener('mouseup', () => mouse = false);
@@ -183,6 +184,7 @@ const video = new Video({
     parentId: '#video',
     width: '100%',
     maxwidth: '1000px',
-    maxheight: '500px'
+    maxheight: '500px',
+    volume:'0.5'
 
 }).init();
