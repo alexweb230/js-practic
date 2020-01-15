@@ -135,12 +135,18 @@ class Video {
         progress.addEventListener('mouseup', () => mouse = false);
     }
 
+    //volume
+    volume(){
+        console.log('volume');
+    }
+
     // инит  плеера
     init() {
         this.addVideo();
         this.addControls();
         this.play();
         this.progress();
+        this.volume();
     }
 }
 
