@@ -159,23 +159,18 @@ class Video {
             btnMove.style.height = different + '%';
             this.videoPlayer.volume = different / 100;
         }
-        // this.range.addEventListener('click', rangeMove);
+
         this.range.addEventListener('mousedown', rangeMove);
         this.range.addEventListener('mousemove', e => mouse && rangeMove(e));
         this.range.addEventListener('mouseup', () => mouse = false);
-        this.range.addEventListener('mouseout', () => mouse = false);
-
+        this.range.addEventListener('mouseout', () => {
+            mouse = false;
+            setTimeout(() => {
+                this.range.classList.add('hidden');
+            }, 4000);
+        });
 
         btnVol.addEventListener('click', () => this.range.classList.toggle('hidden'));
-
-
-
-
-        // btn.addEventListener('mouseout', () => {
-        //     setTimeout(() => {
-        //         this.range.style.display = 'none';
-        //     }, 3000);
-        // });
     }
 
     // инит  плеера
@@ -194,7 +189,7 @@ const video = new Video({
     width: '100%',
     maxwidth: '1000px',
     maxheight: '500px',
-    volume:'0.5'
+    volume: '0.5'
 
 }).init();
 // инит  плеера 2
