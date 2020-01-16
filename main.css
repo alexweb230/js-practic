@@ -119,17 +119,18 @@ button {
 }
 .range-box {
     height: 2.2em;
-    background: linear-gradient(90deg, transparent 40%,  white 40%, white 60%, transparent 60%);
-    width: 20px;
+    background: linear-gradient(90deg, transparent 45%,  white 45%, white 57%, transparent 57%);
+    width: 30px;
     cursor: pointer;
     border-radius: 3px;
     position: absolute;
     bottom: 100%;
-    left: -3px;
+    left: -9px;
+    margin-bottom: .5em;
 }
 
 .range {
-    background: linear-gradient(90deg, transparent 40%, #01E7FD 40%, #01E7FD 60%, transparent 60%);
+    background: linear-gradient(90deg, transparent 46%, #01E7FD 46%, #01E7FD 57%, transparent 57%);
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -147,7 +148,7 @@ button {
 
     background: cornsilk;
     cursor: pointer;
-    pointer-events: none;
+    /*pointer-events: none;*/
 }
 .btn-volume{
     background: url("img/volume.svg") no-repeat center;

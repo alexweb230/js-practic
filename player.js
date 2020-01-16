@@ -149,6 +149,7 @@ class Video {
     //volume
     volume() {
         let btnMove = this.range.querySelector('.range');
+        let btnVol = this.range.querySelector('.btn-volume');
         let mouse = false;
 
         let rangeMove = e => {
@@ -156,11 +157,7 @@ class Video {
             let different = `${((this.range.offsetHeight - e.offsetY) / offset) * 100}`;
             mouse = true;
             btnMove.style.height = different + '%';
-
             this.videoPlayer.volume = different / 100;
-
-
-
         }
         // this.range.addEventListener('click', rangeMove);
         this.range.addEventListener('mousedown', rangeMove);

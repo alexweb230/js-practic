@@ -335,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579097369908</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="video">
+      <created>1579099512615</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1579099512615</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,10 +354,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="video" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2" timestamp="1579097369784">
+    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2" timestamp="1579099512485">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579097369784" />
+    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579099512485" />
     <state width="1821" height="355" key="GridCell.Tab.0.bottom" timestamp="1579080978037">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -415,18 +422,18 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1821" height="355" key="GridCell.Tab.3.right/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579080978038" />
-    <state x="2702" y="252" key="RollbackChangesDialog" timestamp="1578655510405">
+    <state x="2702" y="252" key="RollbackChangesDialog" timestamp="1579160204696">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2702" y="252" key="RollbackChangesDialog/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578655510405" />
+    <state x="2702" y="252" key="RollbackChangesDialog/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579160204696" />
     <state x="398" y="222" key="SettingsEditor" timestamp="1578645352689">
       <screen x="53" y="24" width="1867" height="1056" />
     </state>
     <state x="398" y="222" key="SettingsEditor/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578645352689" />
-    <state x="2506" y="263" key="Vcs.Push.Dialog.v2" timestamp="1579097371207">
+    <state x="2506" y="263" key="Vcs.Push.Dialog.v2" timestamp="1579099514125">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2506" y="263" key="Vcs.Push.Dialog.v2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579097371207" />
+    <state x="2506" y="263" key="Vcs.Push.Dialog.v2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579099514125" />
     <state x="2679" y="459" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579078770089">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
