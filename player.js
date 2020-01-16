@@ -42,7 +42,7 @@ class Video {
                         <button class="but-play"></button>
                         <div class="volume">
                             <button class="btn-volume"></button>
-                            <div class="range-box">
+                            <div class="range-box hidden">
                                 <div class="range"></div>
                             </div>
                         </div>
@@ -149,7 +149,7 @@ class Video {
     //volume
     volume() {
         let btnMove = this.range.querySelector('.range');
-        let btnVol = this.range.querySelector('.btn-volume');
+        let btnVol = this.$parentId.querySelector('.btn-volume');
         let mouse = false;
 
         let rangeMove = e => {
@@ -164,6 +164,18 @@ class Video {
         this.range.addEventListener('mousemove', e => mouse && rangeMove(e));
         this.range.addEventListener('mouseup', () => mouse = false);
         this.range.addEventListener('mouseout', () => mouse = false);
+
+
+        btnVol.addEventListener('click', () => this.range.classList.toggle('hidden'));
+
+
+
+
+        // btn.addEventListener('mouseout', () => {
+        //     setTimeout(() => {
+        //         this.range.style.display = 'none';
+        //     }, 3000);
+        // });
     }
 
     // инит  плеера
@@ -185,3 +197,22 @@ const video = new Video({
     volume:'0.5'
 
 }).init();
+// инит  плеера 2
+// const video2 = new Video({
+//     parentId: '#video-2',
+//     width: '100%',
+//     maxwidth: '1000px',
+//     maxheight: '500px',
+//     volume:'0.5'
+//
+// }).init();
+
+
+
+
+
+
+
+
+
+
