@@ -159,23 +159,33 @@ class Video {
             btnMove.style.height = `${different}%`;
 
             let num = different / 100;
-            this.videoPlayer.volume = num.toFixed(1);
+            let vol = this.videoPlayer.volume = num.toFixed(1);
+
+            console.log(vol)
+
+            if(vol == 0){
+                 btnVol.classList.add('low');
+            } else if(this.videoPlayer.volume < 0.6){
+                btnVol.classList.add('middle');
+            } else if(this.videoPlayer.volume > 0.6){
+                btnVol.classList.add('large');
+            }
+
+
+            // else if(this.videoPlayer.volume >= 0.4){
+            //     btnVol.classList.add('test-1');
+            // }
+            // else {
+            //     btnVol.classList.remove('test');
+            // }
 
 
         }
 
-
-
-
         this.range.addEventListener('mousedown', rangeMove);
         this.range.addEventListener('mousemove', e => mouse && rangeMove(e));
         this.range.addEventListener('mouseup', () => mouse = false);
-        this.range.addEventListener('mouseout', () => {
-            mouse = false;
-            // setTimeout(() => {
-            //     this.range.classList.add('hidden');
-            // }, 14000);
-        });
+        this.range.addEventListener('mouseout', () => mouse = false);
 
         btnVol.addEventListener('click', () => this.range.classList.toggle('hidden'));
     }
