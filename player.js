@@ -154,20 +154,27 @@ class Video {
 
         let rangeMove = e => {
             let offset = this.range.offsetHeight;
-            let different = `${((this.range.offsetHeight - e.offsetY) / offset) * 100}`;
+            let different = `${((offset - e.offsetY) / offset) * 100}`;
             mouse = true;
-            btnMove.style.height = different + '%';
-            this.videoPlayer.volume = different / 100;
+            btnMove.style.height = `${different}%`;
+
+            let num = different / 100;
+            this.videoPlayer.volume = num.toFixed(1);
+
+
         }
+
+
+
 
         this.range.addEventListener('mousedown', rangeMove);
         this.range.addEventListener('mousemove', e => mouse && rangeMove(e));
         this.range.addEventListener('mouseup', () => mouse = false);
         this.range.addEventListener('mouseout', () => {
             mouse = false;
-            setTimeout(() => {
-                this.range.classList.add('hidden');
-            }, 4000);
+            // setTimeout(() => {
+            //     this.range.classList.add('hidden');
+            // }, 14000);
         });
 
         btnVol.addEventListener('click', () => this.range.classList.toggle('hidden'));
