@@ -4,7 +4,7 @@ class Video {
         this.width = options.width;
         this.maxheight = options.maxheight;
         this.maxwidth = options.maxwidth;
-        this.defVolume = options.volume;
+        this.mute = options.mute = false;
     }
 
     // метод  преоброзование из колекции в массив
@@ -151,9 +151,14 @@ class Video {
         let btnMove = this.range.querySelector('.range');
         let btnVol = this.$parentId.querySelector('.btn-volume');
         let mouse = false;
-        this.videoPlayer.volume = this.defVolume;
+        this.videoPlayer.volume = '0.6';
         btnVol.dataset.vol = 'middle';
         btnMove.style.height = '60%';
+        if(this.mute){
+            btnVol.dataset.vol = 'low';
+            btnMove.style.height = '0';
+            this.videoPlayer.volume = '0';
+        }
 
         let rangeMove = e => {
             let offset = this.range.offsetHeight;
@@ -197,7 +202,7 @@ const video = new Video({
     width: '100%',
     maxwidth: '1000px',
     maxheight: '500px',
-    volume: '0.6'
+    mute: false
 
 }).init();
 // инит  плеера 2

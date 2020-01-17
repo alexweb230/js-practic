@@ -391,7 +391,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579251750829</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="video">
+      <created>1579256046361</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1579256046361</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,10 +414,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2590" y="344" key="#com.intellij.fileTypes.FileTypeChooser/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579250982022" />
-    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2" timestamp="1579256040805">
+    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2" timestamp="1579256046242">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579256040805" />
+    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579256046242" />
     <state width="426" height="466" key="DebuggerActiveHint" timestamp="1579253655641">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
