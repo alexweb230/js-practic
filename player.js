@@ -169,8 +169,6 @@ class Video {
             } else if (this.videoPlayer.volume === 0.9) {
                 btnVol.dataset.vol = "large";
             }
-
-
         }
 
         this.range.addEventListener('mousedown', rangeMove);
