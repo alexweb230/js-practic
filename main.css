@@ -160,20 +160,23 @@ button {
 }
 
 .btn-volume{
-    background: url("img/volume.svg") no-repeat center;
+    /*background: url("img/volume.svg") no-repeat center;*/
     background-size: 100%;
     width: 1em;
     height: 1em;
 }
 
 [data-vol="low"]{
-    border: 1px solid red;
+    background: url("img/vol-low.svg") no-repeat center;
+    background-size: 100%;
 }
 [data-vol="middle"]{
-    border: 1px solid green;
+    background: url("img/vol-middle.svg") no-repeat center;
+    background-size: 100%;
 }
 [data-vol="large"]{
-    border: 1px solid gold;
+    background: url("img/vol-large.svg") no-repeat center;
+    background-size: 100%;
 }
 
 @media all and (min-width: 600px) {

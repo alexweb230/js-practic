@@ -162,13 +162,14 @@ class Video {
             let vol = this.videoPlayer.volume = num.toFixed(1);
 
 
-            if (vol == 0) {
+            if (vol == 0.1) {
                 btnVol.dataset.vol = "low";
-            } else if (this.videoPlayer.volume === 0.6) {
+            } else if (vol == 0.6) {
                 btnVol.dataset.vol = "middle";
-            } else if (this.videoPlayer.volume === 0.9) {
+            } else if (vol  == 0.9) {
                 btnVol.dataset.vol = "large";
             }
+            console.log(vol)
         }
 
         this.range.addEventListener('mousedown', rangeMove);
@@ -177,9 +178,9 @@ class Video {
 
         this.range.addEventListener('mouseout', () => {
             mouse = false;
-            setTimeout(() => {
-                this.range.classList.add('hidden');
-            }, 7000);
+            // setTimeout(() => {
+            //     this.range.classList.add('hidden');
+            // }, 7000);
         });
 
 
