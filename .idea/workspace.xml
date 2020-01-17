@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="483f02ec-1e06-42d8-8e7d-a76bfeb4357a" name="Default" comment="video">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/player.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -398,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579256046361</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="video">
+      <created>1579256342539</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1579256342539</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,10 +422,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2590" y="344" key="#com.intellij.fileTypes.FileTypeChooser/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579250982022" />
-    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2" timestamp="1579256046242">
+    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2" timestamp="1579256342434">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579256046242" />
+    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579256342434" />
     <state width="426" height="466" key="DebuggerActiveHint" timestamp="1579253655641">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -494,10 +502,10 @@
       <screen x="53" y="24" width="1867" height="1056" />
     </state>
     <state x="398" y="222" key="SettingsEditor/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1578645352689" />
-    <state x="2506" y="263" key="Vcs.Push.Dialog.v2" timestamp="1579251752217">
+    <state x="2506" y="263" key="Vcs.Push.Dialog.v2" timestamp="1579256344119">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2506" y="263" key="Vcs.Push.Dialog.v2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579251752217" />
+    <state x="2506" y="263" key="Vcs.Push.Dialog.v2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579256344119" />
     <state x="2679" y="459" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579078770089">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
