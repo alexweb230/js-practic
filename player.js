@@ -41,7 +41,7 @@ class Video {
     controlTemplate = ` 
                         <button class="but-play"></button>
                         <div class="volume">
-                            <button class="btn-volume"></button>
+                            <button class="btn-volume" data-volue="20"></button>
                             <div class="range-box hidden">
                                 <div class="range"></div>
                             </div>
@@ -161,23 +161,14 @@ class Video {
             let num = different / 100;
             let vol = this.videoPlayer.volume = num.toFixed(1);
 
-            console.log(vol)
 
-            if(vol == 0){
-                 btnVol.classList.add('low');
-            } else if(this.videoPlayer.volume < 0.6){
-                btnVol.classList.add('middle');
-            } else if(this.videoPlayer.volume > 0.6){
-                btnVol.classList.add('large');
+            if (vol === 0) {
+                btnVol.dataset.vol = "low";
+            } else if (this.videoPlayer.volume === 0.6) {
+                btnVol.dataset.vol = "moddle";
+            } else if (this.videoPlayer.volume === 0.9) {
+                btnVol.dataset.vol = "large";
             }
-
-
-            // else if(this.videoPlayer.volume >= 0.4){
-            //     btnVol.classList.add('test-1');
-            // }
-            // else {
-            //     btnVol.classList.remove('test');
-            // }
 
 
         }

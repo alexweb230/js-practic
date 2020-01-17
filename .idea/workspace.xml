@@ -362,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579169694679</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="video">
+      <created>1579189426687</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1579189426687</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,10 +381,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="video" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2" timestamp="1579169694499">
+    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2" timestamp="1579189426545">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579169694499" />
+    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579189426545" />
     <state width="1821" height="355" key="GridCell.Tab.0.bottom" timestamp="1579080978037">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
