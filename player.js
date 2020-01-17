@@ -151,6 +151,9 @@ class Video {
         let btnMove = this.range.querySelector('.range');
         let btnVol = this.$parentId.querySelector('.btn-volume');
         let mouse = false;
+        this.videoPlayer.volume = this.defVolume;
+        btnVol.dataset.vol = 'middle';
+        btnMove.style.height = '60%';
 
         let rangeMove = e => {
             let offset = this.range.offsetHeight;
@@ -161,7 +164,6 @@ class Video {
             let num = different / 100;
             let vol = this.videoPlayer.volume = num.toFixed(1);
 
-
             if (vol == 0.1) {
                 btnVol.dataset.vol = "low";
             } else if (vol == 0.6) {
@@ -169,24 +171,14 @@ class Video {
             } else if (vol  == 0.9) {
                 btnVol.dataset.vol = "large";
             }
-            console.log(vol)
         }
 
         this.range.addEventListener('mousedown', rangeMove);
         this.range.addEventListener('mousemove', e => mouse && rangeMove(e));
         this.range.addEventListener('mouseup', () => mouse = false);
-
-        this.range.addEventListener('mouseout', () => {
-            mouse = false;
-            // setTimeout(() => {
-            //     this.range.classList.add('hidden');
-            // }, 7000);
-        });
-
+        this.range.addEventListener('mouseout', () => mouse = false);
 
         btnVol.addEventListener('click', () => this.range.classList.toggle('hidden'));
-
-
     }
 
     // инит  плеера
@@ -205,7 +197,7 @@ const video = new Video({
     width: '100%',
     maxwidth: '1000px',
     maxheight: '500px',
-    volume: '0.5'
+    volume: '0.6'
 
 }).init();
 // инит  плеера 2
