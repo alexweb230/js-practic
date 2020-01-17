@@ -166,6 +166,16 @@ button {
     height: 1em;
 }
 
+[data-vol="low"]{
+    border: 1px solid red;
+}
+[data-vol="middle"]{
+    border: 1px solid green;
+}
+[data-vol="large"]{
+    border: 1px solid gold;
+}
+
 @media all and (min-width: 600px) {
     .video-player--wrap {
         --fz: 1.7em;

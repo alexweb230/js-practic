@@ -41,7 +41,7 @@ class Video {
     controlTemplate = ` 
                         <button class="but-play"></button>
                         <div class="volume">
-                            <button class="btn-volume" data-volue="20"></button>
+                            <button class="btn-volume"></button>
                             <div class="range-box hidden">
                                 <div class="range"></div>
                             </div>
@@ -162,10 +162,10 @@ class Video {
             let vol = this.videoPlayer.volume = num.toFixed(1);
 
 
-            if (vol === 0) {
+            if (vol == 0) {
                 btnVol.dataset.vol = "low";
             } else if (this.videoPlayer.volume === 0.6) {
-                btnVol.dataset.vol = "moddle";
+                btnVol.dataset.vol = "middle";
             } else if (this.videoPlayer.volume === 0.9) {
                 btnVol.dataset.vol = "large";
             }
@@ -176,9 +176,18 @@ class Video {
         this.range.addEventListener('mousedown', rangeMove);
         this.range.addEventListener('mousemove', e => mouse && rangeMove(e));
         this.range.addEventListener('mouseup', () => mouse = false);
-        this.range.addEventListener('mouseout', () => mouse = false);
+
+        this.range.addEventListener('mouseout', () => {
+            mouse = false;
+            setTimeout(() => {
+                this.range.classList.add('hidden');
+            }, 7000);
+        });
+
 
         btnVol.addEventListener('click', () => this.range.classList.toggle('hidden'));
+
+
     }
 
     // инит  плеера
