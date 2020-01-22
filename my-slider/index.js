@@ -4,15 +4,14 @@ class AlexSlider {
     }
 
     // добавление стилей
-    get parent (){
+    get parent() {
         return document.querySelector(`#${this.wrapperInit}`);
     }
+
     addStyles() {
 
-         if(!style){
-             let style = document.createElement('style');
-             style.id = 'alex-slider';
-         }
+        let style = document.createElement('style');
+        style.id = 'alex-slider';
 
         style.textContent = `
                .alex-slider--wrapper {
@@ -40,9 +39,11 @@ class AlexSlider {
                     width: 100%;
                 }`;
 
+                document.head.append(style);
 
 
-        document.head.append(style);
+
+
     }
 
 
