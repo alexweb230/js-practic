@@ -1,8 +1,12 @@
 class AlexSlider {
     constructor(options) {
-        this.wrapper = options.wrapper
+        this.wrapperInit = options.selector;
     }
 
+    // добавление стилей
+    get parent (){
+        return document.querySelector(`#${this.wrapperInit}`);
+    }
     addStyles() {
         let style = document.createElement('style');
         style.id = 'alex-slider';
@@ -31,17 +35,28 @@ class AlexSlider {
                 .alex-slider--item img {
                     width: 100%;
                 }`;
+
+
+
         document.head.append(style);
     }
 
 
     init() {
         this.addStyles();
+        console.log(this.parent);
     };
 
 }
 
-const slider = new AlexSlider({}).init();
+const slider = new AlexSlider({
+    selector: 'my-slider',
+}).init();
+
+
+const slider2 = new AlexSlider({
+    selector: 'my-slider-2',
+}).init();
 
 
 
