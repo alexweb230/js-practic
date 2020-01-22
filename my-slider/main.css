@@ -1,20 +1,2 @@
-.alex-slider--wrapper{
-    overflow: hidden;
-    max-width: 1000px;
-    border: 2px solid;
-}
-
-.alex-slider--container{
-    display: flex;
-
-}
-
-.alex-slider--item{
-   flex-basis: 33%;
-
-}
-.alex-slider--item img{
-    width: 100%;
-}
 
 
