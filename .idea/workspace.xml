@@ -2,67 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="483f02ec-1e06-42d8-8e7d-a76bfeb4357a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/method-arr/index.js" afterPath="$PROJECT_DIR$/method-arr/index.js" />
+      <change afterPath="$PROJECT_DIR$/my-slider/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/method-arr/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/my-slider/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/method-arr/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-slider/index.js" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/method-arr/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/method-arr/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/main.css" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/main.js" />
-        <option value="$PROJECT_DIR$/promis.html" />
-        <option value="$PROJECT_DIR$/js/promis.js" />
-        <option value="$PROJECT_DIR$/method-arr/index.html" />
-        <option value="$PROJECT_DIR$/method-arr/index.js" />
-      </list>
-    </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
@@ -70,11 +36,6 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1973" />
     <option name="y" value="-4" />
@@ -82,63 +43,40 @@
     <option name="height" value="1084" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="js-practic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="js-practic" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="js-practic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="js-practic" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="method-arr" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/js-practic/my-slider/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -189,113 +127,82 @@
     <option name="localTasksCounter" value="6" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24837000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="1973" y="-4" width="1867" height="1084" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2553542" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="prototype" />
     <MESSAGE value="method arr" />
     <option name="LAST_COMMIT_MESSAGE" value="method arr" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/form-2/main.css" />
-    <entry file="file://$PROJECT_DIR$/form-2/main.js" />
-    <entry file="file://$PROJECT_DIR$/form-2/index.html" />
-    <entry file="file://$PROJECT_DIR$/form-2/main.js" />
-    <entry file="file://$PROJECT_DIR$/form-2/main.css" />
-    <entry file="file://$PROJECT_DIR$/form-1/index.html" />
-    <entry file="file://$PROJECT_DIR$/form-1/js/main.js" />
-    <entry file="file://$PROJECT_DIR$/form-1/main.css" />
-    <entry file="file://$PROJECT_DIR$/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/form-1/index.html" />
-    <entry file="file://$PROJECT_DIR$/form-2/main.css" />
-    <entry file="file://$PROJECT_DIR$/form-1/js/main.js" />
-    <entry file="file://$PROJECT_DIR$/form-2/main.js" />
-    <entry file="file://$PROJECT_DIR$/form-2/index.html" />
-    <entry file="file://$PROJECT_DIR$/main.css" />
-    <entry file="file://$PROJECT_DIR$/js/main.js" />
-    <entry file="file://$PROJECT_DIR$/promis.html" />
-    <entry file="file://$PROJECT_DIR$/js/promis.js" />
-    <entry file="file://$PROJECT_DIR$/js/class.js" />
-    <entry file="file://$PROJECT_DIR$/class.html" />
-    <entry file="file://$PROJECT_DIR$/proxy/main.js" />
-    <entry file="file://$PROJECT_DIR$/proxy/index.html" />
-    <entry file="file://$PROJECT_DIR$/player.js" />
-    <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/js/main.js" />
-    <entry file="file://$PROJECT_DIR$/form-2/index.html" />
-    <entry file="file://$PROJECT_DIR$/form-2/main.css" />
-    <entry file="file://$PROJECT_DIR$/form-2/main.js" />
-    <entry file="file://$PROJECT_DIR$/form-2/index.html" />
-    <entry file="file://$PROJECT_DIR$/form-2/main.css" />
-    <entry file="file://$PROJECT_DIR$/form-2/main.js" />
-    <entry file="file://$PROJECT_DIR$/form-2/index.html" />
-    <entry file="file://$PROJECT_DIR$/form-2/main.js" />
-    <entry file="file://$PROJECT_DIR$/form-2/main.css" />
-    <entry file="file://$PROJECT_DIR$/form-1/index.html" />
-    <entry file="file://$PROJECT_DIR$/form-1/js/main.js" />
-    <entry file="file://$PROJECT_DIR$/form-1/main.css" />
-    <entry file="file://$PROJECT_DIR$/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/form-1/index.html" />
-    <entry file="file://$PROJECT_DIR$/form-2/main.css" />
-    <entry file="file://$PROJECT_DIR$/form-1/js/main.js" />
-    <entry file="file://$PROJECT_DIR$/form-2/main.js" />
-    <entry file="file://$PROJECT_DIR$/form-2/index.html" />
-    <entry file="file://$PROJECT_DIR$/main.css" />
-    <entry file="file://$PROJECT_DIR$/js/main.js" />
-    <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/promis.html" />
-    <entry file="file://$PROJECT_DIR$/js/promis.js" />
-    <entry file="file://$PROJECT_DIR$/method-arr/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/method-arr/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state width="1821" height="355" key="GridCell.Tab.0.bottom" timestamp="1579701117564">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1821" height="355" key="GridCell.Tab.0.bottom/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579701117564" />
+    <state width="1821" height="355" key="GridCell.Tab.0.center" timestamp="1579701117564">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1821" height="355" key="GridCell.Tab.0.center/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579701117564" />
+    <state width="1821" height="355" key="GridCell.Tab.0.left" timestamp="1579701117564">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1821" height="355" key="GridCell.Tab.0.left/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579701117564" />
+    <state width="1821" height="355" key="GridCell.Tab.0.right" timestamp="1579701117564">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1821" height="355" key="GridCell.Tab.0.right/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579701117564" />
+    <state width="1821" height="355" key="GridCell.Tab.1.bottom" timestamp="1579701117565">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1821" height="355" key="GridCell.Tab.1.bottom/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579701117565" />
+    <state width="1821" height="355" key="GridCell.Tab.1.center" timestamp="1579701117564">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1821" height="355" key="GridCell.Tab.1.center/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579701117564" />
+    <state width="1821" height="355" key="GridCell.Tab.1.left" timestamp="1579701117564">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1821" height="355" key="GridCell.Tab.1.left/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579701117564" />
+    <state width="1821" height="355" key="GridCell.Tab.1.right" timestamp="1579701117564">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1821" height="355" key="GridCell.Tab.1.right/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579701117564" />
+    <state width="1821" height="355" key="GridCell.Tab.2.bottom" timestamp="1579701117565">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1821" height="355" key="GridCell.Tab.2.bottom/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579701117565" />
+    <state width="1821" height="355" key="GridCell.Tab.2.center" timestamp="1579701117565">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1821" height="355" key="GridCell.Tab.2.center/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579701117565" />
+    <state width="1821" height="355" key="GridCell.Tab.2.left" timestamp="1579701117565">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1821" height="355" key="GridCell.Tab.2.left/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579701117565" />
+    <state width="1821" height="355" key="GridCell.Tab.2.right" timestamp="1579701117565">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1821" height="355" key="GridCell.Tab.2.right/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579701117565" />
+    <state width="1821" height="355" key="GridCell.Tab.3.bottom" timestamp="1579701117565">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1821" height="355" key="GridCell.Tab.3.bottom/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579701117565" />
+    <state width="1821" height="355" key="GridCell.Tab.3.center" timestamp="1579701117565">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1821" height="355" key="GridCell.Tab.3.center/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579701117565" />
+    <state width="1821" height="355" key="GridCell.Tab.3.left" timestamp="1579701117565">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1821" height="355" key="GridCell.Tab.3.left/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579701117565" />
+    <state width="1821" height="355" key="GridCell.Tab.3.right" timestamp="1579701117565">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1821" height="355" key="GridCell.Tab.3.right/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579701117565" />
+    <state x="2686" y="264" key="RollbackChangesDialog" timestamp="1579697829959">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2686" y="264" key="RollbackChangesDialog/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1579697829959" />
   </component>
 </project>
