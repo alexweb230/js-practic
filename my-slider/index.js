@@ -8,8 +8,12 @@ class AlexSlider {
         return document.querySelector(`#${this.wrapperInit}`);
     }
     addStyles() {
-        let style = document.createElement('style');
-        style.id = 'alex-slider';
+
+         if(!style){
+             let style = document.createElement('style');
+             style.id = 'alex-slider';
+         }
+
         style.textContent = `
                .alex-slider--wrapper {
                     overflow: hidden;

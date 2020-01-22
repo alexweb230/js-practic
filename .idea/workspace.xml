@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="483f02ec-1e06-42d8-8e7d-a76bfeb4357a" name="Default" comment="method arr">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-slider/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/my-slider/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-slider/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-slider/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
