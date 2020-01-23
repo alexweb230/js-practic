@@ -52,6 +52,11 @@ class AlexSlider {
     }
 
     addArrows(){
+      let arrows = `
+         <button class="alex-btn--prev">prev</button>
+         <button class="alex-btn--next">next</button>
+      `;
+       this.parent.append(arrows);
 
     }
 
