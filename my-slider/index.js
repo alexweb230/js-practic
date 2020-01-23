@@ -5,14 +5,23 @@ class AlexSlider {
 
     // добавление стилей
     get parent() {
-        return document.querySelector(`#${this.wrapperInit}`);
+        return document.querySelector(`${this.wrapperInit}`);
+    }
+    get prev(){
+        // return document.querySelector(`${this.wrapperInit}`);
     }
 
+    get next(){
+
+    }
+
+    //добавление стилей слайдера
     addStyles() {
-
-        let style = document.createElement('style');
-        style.id = 'alex-slider';
-
+        let style = document.getElementById('alex-slider');
+        if(!style){
+            style = document.createElement('style');
+            style.id = 'alex-slider';
+        }
         style.textContent = `
                .alex-slider--wrapper {
                     overflow: hidden;
@@ -39,28 +48,28 @@ class AlexSlider {
                     width: 100%;
                 }`;
 
-                document.head.append(style);
+        document.head.append(style);
+    }
 
-
-
+    addArrows(){
 
     }
 
 
     init() {
         this.addStyles();
-        console.log(this.parent);
+        this.addArrows();
     };
 
 }
 
 const slider = new AlexSlider({
-    selector: 'my-slider',
+    selector: '.my-slider',
 }).init();
 
 
 const slider2 = new AlexSlider({
-    selector: 'my-slider-2',
+    selector: '.my-slider-2',
 }).init();
 
 
