@@ -2,7 +2,14 @@ class AlexSlider {
     constructor(options) {
         this.wrapperInit = options.selector;
         this.arrows = options.arrows;
+        this.slideWidth = options.slideWidth;
+        // this.settings = {
+        //     position,
+        // }
     }
+
+     position = 0;
+     widthSlide = 100 / this.slideWidth;
 
     // елементы разметки
     get parent() {
@@ -15,10 +22,13 @@ class AlexSlider {
     get next() {
         return document.querySelector(`${this.wrapperInit} .alex-btn--next`);
     }
-    get slideWidth(){
-        let slider = document.querySelector(`${this.wrapperInit} .alex-slider--item`);
-        return slider.offsetWidth;
+    get track(){
+        return document.querySelector(`${this.wrapperInit} .alex-slider--container`);
     }
+    // get slideWidth(){
+    //     let slider = document.querySelector(`${this.wrapperInit} .alex-slider--item`);
+    //     return slider.offsetWidth / 100;
+    // }
 
     //добавление стилей слайдера
     addStyles() {
@@ -74,13 +84,24 @@ class AlexSlider {
     //пролистывание в право
     prevSlide(){
         this.prev.addEventListener('click',  () => {
-            console.log(this.slideWidth)
+           ++this.position;
+           this.track.style.transform = `translateX(${this.position *  this.widthSlide}%)`;
+
+            console.log(this.position)
+
+
+
         });
     }
     nextSlide(){
         this.next.addEventListener('click',  () => {
-            console.log('next')
+
+            --this.position;
+            console.log(this.position)
+
         });
+
+
     }
 
     //инит слайдера
@@ -92,6 +113,9 @@ class AlexSlider {
         }
         this.prevSlide();
         this.nextSlide();
+
+
+
     };
 
 }
@@ -99,12 +123,14 @@ class AlexSlider {
 const slider = new AlexSlider({
     selector: '.my-slider',
     arrows: true,
+    slideWidth: 4,
 }).init();
 
 
 const slider2 = new AlexSlider({
     selector: '.my-slider-2',
     arrows: true,
+    slideWidth: 4,
 }).init();
 
 
