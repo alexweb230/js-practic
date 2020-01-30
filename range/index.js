@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         moneOther.textContent = moneyO;
 
     }
+
     const result = () => {
         if(rangeStart.value ===  rangeEnd.value){
             console.log('test')

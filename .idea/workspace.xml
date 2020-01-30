@@ -90,7 +90,7 @@
       <workItem from="1574753667245" duration="12868000" />
       <workItem from="1575445172856" duration="24000" />
       <workItem from="1577430791265" duration="956000" />
-      <workItem from="1580386215241" duration="7254000" />
+      <workItem from="1580386215241" duration="7980000" />
     </task>
     <task id="LOCAL-00001" summary="prototype">
       <created>1574671222612</created>
@@ -176,7 +176,21 @@
       <option name="project" value="LOCAL" />
       <updated>1580396355918</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="method arr">
+      <created>1580396411967</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1580396411967</updated>
+    </task>
+    <task id="LOCAL-00014" summary="method arr">
+      <created>1580396439720</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1580396439720</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,10 +202,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="method arr" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2" timestamp="1580396411871">
+    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2" timestamp="1580396439637">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580396411871" />
+    <state x="2516" y="133" width="779" height="809" key="CommitChangelistDialog2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580396439637" />
     <state width="1821" height="288" key="GridCell.Tab.0.bottom" timestamp="1580369686542">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -224,10 +238,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1821" height="288" key="GridCell.Tab.1.right/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580369686542" />
-    <state x="2506" y="263" key="Vcs.Push.Dialog.v2" timestamp="1580396414152">
+    <state x="2506" y="263" key="Vcs.Push.Dialog.v2" timestamp="1580396440768">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2506" y="263" key="Vcs.Push.Dialog.v2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580396414152" />
+    <state x="2506" y="263" key="Vcs.Push.Dialog.v2/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580396440768" />
     <state x="2570" y="246" key="run.anything.popup" timestamp="1580391388382">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
