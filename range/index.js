@@ -2,6 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
      const rangeStart = document.getElementById('start');
      const rangeEnd = document.getElementById('end');
+     let dayThis = document.querySelector('.day_this');
+     let dayO = document.querySelector('.day_other');
+     let money = document.querySelector('.money_this');
+     let moneO = document.querySelector('.money_other');
 
 
     rangeStart.addEventListener('change', heandler);
@@ -14,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const result = () => {
         if(rangeStart.value ===  rangeEnd.value){
             console.log('test')
-            dataDisplay([0,0,3,0]);
+            dataDisplay([0,0,0,0]);
         }
     };
 
