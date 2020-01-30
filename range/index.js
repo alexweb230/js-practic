@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
    function heandler() {
-       console.log('tt');
+        if(rangeStart.value >  rangeEnd.value || rangeEnd.value < rangeStart.value){
+            rangeEnd.value = rangeStart.value = this.value;
+        }
    }
 
 
