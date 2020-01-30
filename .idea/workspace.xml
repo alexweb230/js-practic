@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="483f02ec-1e06-42d8-8e7d-a76bfeb4357a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/range/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/range/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/range/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/range/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +40,18 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
+  <component name="ProjectId" id="1X79LAq6x916iw8HuvZALEqp9Sd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -82,6 +91,7 @@
       <workItem from="1574753667245" duration="12868000" />
       <workItem from="1575445172856" duration="24000" />
       <workItem from="1577430791265" duration="956000" />
+      <workItem from="1580386215241" duration="2243000" />
     </task>
     <task id="LOCAL-00001" summary="prototype">
       <created>1574671222612</created>
@@ -162,5 +172,9 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1821" height="288" key="GridCell.Tab.1.right/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580369686542" />
+    <state x="2570" y="246" key="run.anything.popup" timestamp="1580391388382">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2570" y="246" key="run.anything.popup/53.24.1867.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580391388382" />
   </component>
 </project>
