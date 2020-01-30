@@ -7,10 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
     rangeStart.addEventListener('change', heandler);
     rangeEnd.addEventListener('change', heandler);
 
+    const dataDisplay = arr => {
+        const [day, money, dayO, moneyO] = arr;
 
-    const result = () => {
-        console.log('test');
     }
+    const result = () => {
+        if(rangeStart.value ===  rangeEnd.value){
+            console.log('test')
+            dataDisplay([0,0,3,0]);
+        }
+    };
 
 
    function heandler() {
