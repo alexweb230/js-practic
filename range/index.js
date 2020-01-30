@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
      const rangeStart = document.getElementById('start');
      const rangeEnd = document.getElementById('end');
      let dayThis = document.querySelector('.day_this');
-     let dayO = document.querySelector('.day_other');
-     let money = document.querySelector('.money_this');
-     let moneO = document.querySelector('.money_other');
+     let dayOther = document.querySelector('.day_other');
+     let moneyThis = document.querySelector('.money_this');
+     let moneOther = document.querySelector('.money_other');
 
 
     rangeStart.addEventListener('change', heandler);
@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const dataDisplay = arr => {
         const [day, money, dayO, moneyO] = arr;
+        dayThis.textContent = day;
+        dayOther.textContent = dayO;
+        moneyThis.textContent = money;
+        moneOther.textContent = moneyO;
 
     }
     const result = () => {
