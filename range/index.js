@@ -1,5 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    const data = [
+        [ [], [1, 6500, 2, 15000], [2, 12000, 4, 30000], [3, 18000, 7, 52500], [4, 24000, 12, 90000], [6, 35000, 16, 127500] ],
+        [ [], [], [1, 7000, 2, 15000], [2, 13000, 5, 37500], [3, 19000, 10, 75000], [5, 30000, 13, 112500] ],
+        [ [], [], [], [1, 7000, 3, 22500], [2, 13000, 8, 60000], [4, 24000, 11, 97500] ],
+        [ [], [], [], [], [1, 7000, 5, 37500], [3, 18000, 10, 75000] ],
+        [ [], [], [], [], [], [2, 12000, 5, 37500] ],
+    ];
+
+
      const rangeStart = document.getElementById('start');
      const rangeEnd = document.getElementById('end');
      let dayThis = document.querySelector('.day_this');
@@ -21,10 +30,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const result = () => {
-        if(rangeStart.value ===  rangeEnd.value){
-            console.log('test')
+        const startVal = parseInt(rangeStart.value);
+        const endVal = parseInt(rangeEnd.value);
+
+        if(startVal ===  endVal){
+
             dataDisplay([0,0,0,0]);
+
+        } else {
+            dataDisplay(data[startVal][endVal]);
         }
+
+
     };
 
 
